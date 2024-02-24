@@ -1,4 +1,5 @@
 import { useState } from "react";
+import defaultCar from "../../../public/images/default-car.jpg";
 import {
   CarImg,
   CarItem,
@@ -37,7 +38,7 @@ function CarItems({ items }) {
   return (
     <CarItem key={items.id}>
       <CarImgWrapper>
-        <CarImg src={items.img} alt={items.make} />
+        <CarImg src={items.img ? items.img : defaultCar} alt={items.make} />
         <HeartIconWrapper
           onClick={() => setFavorite((prevState) => !prevState)}
         >

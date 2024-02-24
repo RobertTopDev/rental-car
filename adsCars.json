@@ -21,7 +21,7 @@
     ],
     "rentalPrice": "$40",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "123 Example Street, Kiev, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 5858
   },
@@ -47,7 +47,7 @@
     ],
     "rentalPrice": "$50",
     "rentalCompany": "Premium Auto Rentals",
-    "address": "456 Example Avenue, Lviv, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nProof of insurance required",
     "mileage": 5352
   },
@@ -73,7 +73,7 @@
     ],
     "rentalPrice": "$45",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "789 Example Boulevard, Odessa, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 23\nValid driver's license\nCredit card required",
     "mileage": 5966
   },
@@ -99,7 +99,7 @@
     ],
     "rentalPrice": "$55",
     "rentalCompany": "Adventure Car Rentals",
-    "address": "321 Example Road, Kharkiv, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 4771
   },
@@ -125,7 +125,7 @@
     ],
     "rentalPrice": "$35",
     "rentalCompany": "Adventure Car Rentals",
-    "address": "987 Example Street, Kyiv, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
     "mileage": 4061
   },
@@ -151,7 +151,7 @@
     ],
     "rentalPrice": "$30",
     "rentalCompany": "City Car Rentals",
-    "address": "654 Example Avenue, Lviv, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nProof of insurance required",
     "mileage": 5374
   },
@@ -177,7 +177,7 @@
     ],
     "rentalPrice": "$40",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "321 Example Road, Odessa, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 6282
   },
@@ -203,7 +203,7 @@
     ],
     "rentalPrice": "$50",
     "rentalCompany": "Elite Car Rentals",
-    "address": "123 Example Boulevard, Kharkiv, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nInsurance coverage required",
     "mileage": 6173
   },
@@ -229,7 +229,7 @@
     ],
     "rentalPrice": "$45",
     "rentalCompany": "Premium Car Rentals",
-    "address": "789 Example Square, Dnipro, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 4989
   },
@@ -255,7 +255,7 @@
     ],
     "rentalPrice": "$25",
     "rentalCompany": "Economy Car Rentals",
-    "address": "456 Example Lane, Zaporizhzhia, Ukraine",
+    "address": "Chicago, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
     "mileage": 4591
   },
@@ -281,7 +281,7 @@
     ],
     "rentalPrice": "$30",
     "rentalCompany": "Fun Car Rentals",
-    "address": "234 Example Place, Vinnytsia, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nProof of insurance required",
     "mileage": 6275
   },
@@ -307,7 +307,7 @@
     ],
     "rentalPrice": "$150",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "567 Example Street, Lviv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 30\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 4317
   },
@@ -333,7 +333,7 @@
     ],
     "rentalPrice": "$75",
     "rentalCompany": "Exquisite Car Rentals",
-    "address": "789 Example Boulevard, Kyiv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and proof of insurance required",
     "mileage": 5722
   },
@@ -359,7 +359,7 @@
     ],
     "rentalPrice": "$200",
     "rentalCompany": "Supreme Car Rentals",
-    "address": "123 Example Avenue, Odessa, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 30\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 6464
   },
@@ -385,7 +385,7 @@
     ],
     "rentalPrice": "$50",
     "rentalCompany": "Classic Car Rentals",
-    "address": "456 Example Street, Lviv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 5091
   },
@@ -411,7 +411,7 @@
     ],
     "rentalPrice": "$500",
     "rentalCompany": "Supercar Rentals",
-    "address": "321 Example Road, Kharkiv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 30\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 5832
   },
@@ -437,7 +437,7 @@
     ],
     "rentalPrice": "$150",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "987 Example Lane, Dnipro, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 4635
   },
@@ -463,7 +463,7 @@
     ],
     "rentalPrice": "$300",
     "rentalCompany": "Classic Car Rentals",
-    "address": "654 Example Circle, Zaporizhzhia, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and proof of insurance required",
     "mileage": 5990
   },
@@ -489,7 +489,7 @@
     ],
     "rentalPrice": "$200",
     "rentalCompany": "Muscle Car Rentals",
-    "address": "123 Example Street, Lviv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 6330
   },
@@ -515,7 +515,7 @@
     ],
     "rentalPrice": "$250",
     "rentalCompany": "Luxury Car Rentals",
-    "address": "456 Example Avenue, Kyiv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 6280
   },
@@ -541,7 +541,7 @@
     ],
     "rentalPrice": "$100",
     "rentalCompany": "Family Car Rentals",
-    "address": "789 Example Boulevard, Odesa, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 5807
   },
@@ -567,7 +567,7 @@
     ],
     "rentalPrice": "$50",
     "rentalCompany": "Economy Car Rentals",
-    "address": "321 Example Lane, Kharkiv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 4618
   },
@@ -593,7 +593,7 @@
     ],
     "rentalPrice": "$150",
     "rentalCompany": "Premium Car Rentals",
-    "address": "987 Example Road, Dnipro, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 6618
   },
@@ -619,7 +619,7 @@
     ],
     "rentalPrice": "$300",
     "rentalCompany": "Luxury SUV Rentals",
-    "address": "654 Example Street, Lviv, Ukraine",
+    "address": "Schaumburg, Illinois",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 4856
   },
@@ -645,8 +645,528 @@
     ],
     "rentalPrice": "$50",
     "rentalCompany": "Economy Car Rentals",
-    "address": "321 Example Lane, Kharkiv, Ukraine",
+    "address": "Waukegan, Illinois",
     "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit and insurance required",
     "mileage": 6234
+  },
+  {
+    "id": 95972,
+    "year": 2000,
+    "make": "GMC",
+    "model": "Yukon Denali",
+    "type": "SUV",
+    "img": "https://ftp.goit.study/img/cars-test-task/gmc_yukon_denali.jpeg",
+    "description": "The GMC Yukon Denali is a full-size luxury SUV that offers a powerful engine, a comfortable and spacious interior, and a host of advanced features.",
+    "fuelConsumption": "14.5",
+    "engineSize": "6.0L V8",
+    "accessories": [
+      "Heated and ventilated front seats",
+      "BOSE premium sound system",
+      "Power-folding third-row seats"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Adaptive suspension",
+      "Advanced safety features"
+    ],
+    "rentalPrice": "$45",
+    "rentalCompany": "Premium Car Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+    "mileage": 4989
+  },
+  {
+    "id": 962234,
+    "year": 2001,
+    "make": "BMW",
+    "model": "Z8",
+    "type": "Convertible",
+    "img": "https://ftp.goit.study/img/cars-test-task/bmw_z8.jpeg",
+    "description": "The BMW Z8 is a classic and timeless convertible that combines iconic retro-inspired design, outstanding performance, and luxurious comfort.",
+    "fuelConsumption": "14.2",
+    "engineSize": "4.9L V8",
+    "accessories": [
+      "Aluminum space frame",
+      "Nappa leather upholstery",
+      "Harman Kardon audio system"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Dynamic Stability Control",
+      "Power-operated soft-top roof"
+    ],
+    "rentalPrice": "$300",
+    "rentalCompany": "Classic Car Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and proof of insurance required",
+    "mileage": 5990
+  },
+  {
+    "id": 95186,
+    "year": 2020,
+    "make": "Volvo",
+    "model": "XC60",
+    "type": "SUV",
+    "photoLink": "https://ftp.goit.study/img/cars-test-task/volvo_xc60_2.jpeg",
+    "description": "The Volvo XC60 is a luxurious and versatile SUV that combines Scandinavian design, advanced safety features, and a comfortable driving experience, making it an ideal choice for families and adventure enthusiasts.",
+    "fuelConsumption": "8.5",
+    "engineSize": "2.0L 4-cylinder",
+    "accessories": [
+      "Leather upholstery",
+      "Panoramic sunroof",
+      "Harman Kardon premium sound system"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "City Safety collision avoidance technology",
+      "Power tailgate"
+    ],
+    "rentalPrice": "$150",
+    "rentalCompany": "Premium Car Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 6618
+  },
+  {
+    "id": 9612,
+    "year": 2004,
+    "make": "Mercedes-Benz",
+    "model": "SL-Class",
+    "type": "Convertible",
+    "img": "https://ftp.goit.study/img/cars-test-task/mercedes_sl_class.jpeg",
+    "description": "The Mercedes-Benz SL-Class is a legendary luxury convertible that offers a perfect blend of thrilling performance, advanced technology, and opulent comfort.",
+    "fuelConsumption": "11.8",
+    "engineSize": "5.0L V8",
+    "accessories": [
+      "Airscarf neck-level heating",
+      "Harman Kardon premium audio system",
+      "Active Body Control suspension"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Retractable hardtop roof",
+      "Multi-contour seats"
+    ],
+    "rentalPrice": "$75",
+    "rentalCompany": "Exquisite Car Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and proof of insurance required",
+    "mileage": 5722
+  },
+  {
+    "id": 12345,
+    "year": 2022,
+    "make": "Toyota",
+    "model": "Camry",
+    "type": "Sedan",
+    "photoLink": "https://example.com/toyota_camry.jpg",
+    "description": "The Toyota Camry is a reliable and fuel-efficient sedan, known for its smooth ride and advanced safety features.",
+    "fuelConsumption": "7.2",
+    "engineSize": "2.5L 4-cylinder",
+    "accessories": [
+      "Cloth upholstery",
+      "Bluetooth connectivity",
+      "Lane Departure Warning"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Adaptive Cruise Control",
+      "Keyless entry"
+    ],
+    "rentalPrice": "$120",
+    "rentalCompany": "City Car Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 15000
+  },
+  {
+    "id": 95187,
+    "year": 2021,
+    "make": "Ford",
+    "model": "Mustang",
+    "type": "Coupe",
+    "photoLink": "https://example.com/ford_mustang.jpg",
+    "description": "The Ford Mustang is an iconic American muscle car, known for its powerful performance and classic design.",
+    "fuelConsumption": "13.5",
+    "engineSize": "5.0L V8",
+    "accessories": [
+      "Leather seats",
+      "Sync 3 infotainment system",
+      "Brembo brakes"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Track Apps performance metrics",
+      "Selectable drive modes"
+    ],
+    "rentalPrice": "$180",
+    "rentalCompany": "Fast & Furious Rentals",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+    "mileage": 8000
+  },
+  {
+    "id": 95188,
+    "year": 2022,
+    "make": "Honda",
+    "model": "Accord",
+    "type": "Sedan",
+    "photoLink": "https://example.com/honda_accord.jpg",
+    "description": "The Honda Accord is a reliable and fuel-efficient sedan, offering a comfortable interior and advanced safety features.",
+    "fuelConsumption": "7.0",
+    "engineSize": "1.5L 4-cylinder",
+    "accessories": [
+      "Cloth upholstery",
+      "Apple CarPlay",
+      "Honda Sensing safety suite"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Lane Keeping Assist",
+      "Dual-zone automatic climate control"
+    ],
+    "rentalPrice": "$130",
+    "rentalCompany": "City Cars & More",
+    "address": "Waukegan, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 6000
+  },
+  {
+    "id": 95189,
+    "year": 2022,
+    "make": "BMW",
+    "model": "X5",
+    "type": "SUV",
+    "photoLink": "https://example.com/bmw_x5.jpg",
+    "description": "The BMW X5 is a luxurious and versatile SUV, offering a premium driving experience with advanced technology and comfort features.",
+    "fuelConsumption": "9.8",
+    "engineSize": "3.0L inline-6",
+    "accessories": [
+      "Leather seats",
+      "Panoramic sunroof",
+      "Harman Kardon sound system"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Gesture control infotainment",
+      "Dynamic Cruise Control"
+    ],
+    "rentalPrice": "$200",
+    "rentalCompany": "Luxury Auto Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 4000
+  },
+  {
+    "id": 95190,
+    "year": 2021,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "type": "SUV",
+    "photoLink": "https://example.com/chevrolet_tahoe.jpg",
+    "description": "The Chevrolet Tahoe is a spacious and powerful SUV, perfect for family trips with its comfortable interior and advanced safety features.",
+    "fuelConsumption": "15.0",
+    "engineSize": "5.3L V8",
+    "accessories": [
+      "Leather upholstery",
+      "Entertainment system",
+      "Wireless charging"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Lane Change Alert",
+      "Power-folding third-row seats"
+    ],
+    "rentalPrice": "$170",
+    "rentalCompany": "Family Adventure Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+    "mileage": 10000
+  },
+  {
+    "id": 95191,
+    "year": 2022,
+    "make": "Tesla",
+    "model": "Model 3",
+    "type": "Electric",
+    "photoLink": "https://example.com/tesla_model_3.jpg",
+    "description": "The Tesla Model 3 is an electric sedan, offering a sleek design, high performance, and cutting-edge autopilot features.",
+    "fuelConsumption": "Electric",
+    "engineSize": "Electric",
+    "accessories": [
+      "Premium interior",
+      "Autopilot with Full Self-Driving capability",
+      "15-inch touchscreen display"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Over-the-air software updates",
+      "Supercharger access"
+    ],
+    "rentalPrice": "$220",
+    "rentalCompany": "GreenDrive Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 2000
+  },
+  {
+    "id": 95192,
+    "year": 2021,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "type": "Sedan",
+    "photoLink": "https://example.com/mercedes_c_class.jpg",
+    "description": "The Mercedes-Benz C-Class is a sophisticated and elegant sedan, offering a perfect blend of luxury, performance, and advanced technology.",
+    "fuelConsumption": "8.7",
+    "engineSize": "2.0L inline-4",
+    "accessories": [
+      "Leather seats",
+      "Burmester premium sound system",
+      "Multimedia touchscreen"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Blind Spot Assist",
+      "Adaptive cruise control"
+    ],
+    "rentalPrice": "$190",
+    "rentalCompany": "Elite Car Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 8000
+  },
+  {
+    "id": 95193,
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Outback",
+    "type": "Wagon",
+    "photoLink": "https://example.com/subaru_outback.jpg",
+    "description": "The Subaru Outback is a versatile and adventurous wagon, equipped with all-wheel drive and features suitable for outdoor enthusiasts.",
+    "fuelConsumption": "8.5",
+    "engineSize": "2.5L 4-cylinder",
+    "accessories": [
+      "Cloth upholstery",
+      "Starlink multimedia system",
+      "Roof rails"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Eyesight Driver Assist Technology",
+      "X-Mode for off-road capability"
+    ],
+    "rentalPrice": "$150",
+    "rentalCompany": "Adventure Car Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 12000
+  },
+  {
+    "id": 95194,
+    "year": 2022,
+    "make": "Audi",
+    "model": "Q5",
+    "type": "SUV",
+    "photoLink": "https://example.com/audi_q5.jpg",
+    "description": "The Audi Q5 is a stylish and performance-oriented SUV, combining a luxurious interior with advanced technology and safety features.",
+    "fuelConsumption": "9.0",
+    "engineSize": "2.0L turbocharged 4-cylinder",
+    "accessories": [
+      "Leather seats",
+      "Audi Virtual Cockpit",
+      "Bang & Olufsen sound system"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Audi Pre Sense City",
+      "Power tailgate"
+    ],
+    "rentalPrice": "$200",
+    "rentalCompany": "Luxury Drives Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 5000
+  },
+  {
+    "id": 95195,
+    "year": 2022,
+    "make": "Nissan",
+    "model": "Rogue",
+    "type": "SUV",
+    "photoLink": "https://example.com/nissan_rogue.jpg",
+    "description": "The Nissan Rogue is a compact and versatile SUV, offering a comfortable ride and a range of safety and technology features.",
+    "fuelConsumption": "7.0",
+    "engineSize": "2.5L 4-cylinder",
+    "accessories": [
+      "Cloth upholstery",
+      "Nissan Safety Shield 360",
+      "ProPILOT Assist"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Divide-N-Hide cargo system",
+      "Rear automatic braking"
+    ],
+    "rentalPrice": "$140",
+    "rentalCompany": "City Explorers Rentals",
+    "address": "Elgin, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 3000
+  },
+  {
+    "id": 95196,
+    "year": 2021,
+    "make": "Porsche",
+    "model": "911",
+    "type": "Coupe",
+    "photoLink": "https://example.com/porsche_911.jpg",
+    "description": "The Porsche 911 is a legendary sports car, known for its iconic design, powerful performance, and precision engineering.",
+    "fuelConsumption": "13.0",
+    "engineSize": "3.0L twin-turbocharged flat-6",
+    "accessories": [
+      "Leather seats",
+      "Porsche Communication Management",
+      "Sport Chrono Package"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Porsche Stability Management",
+      "Launch Control"
+    ],
+    "rentalPrice": "$250",
+    "rentalCompany": "Exotic Car Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 6000
+  },
+  {
+    "id": 95197,
+    "year": 2022,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "type": "SUV",
+    "photoLink": "https://example.com/hyundai_tucson.jpg",
+    "description": "The Hyundai Tucson is a compact SUV, offering a stylish design, fuel efficiency, and a range of tech features for a modern driving experience.",
+    "fuelConsumption": "6.5",
+    "engineSize": "2.4L 4-cylinder",
+    "accessories": [
+      "Cloth upholstery",
+      "8-inch touchscreen display",
+      "SmartSense safety suite"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Blind-Spot Collision-Avoidance Assist",
+      "Hands-free smart liftgate"
+    ],
+    "rentalPrice": "$130",
+    "rentalCompany": "City Cruisers Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 4000
+  },
+  {
+    "id": 95198,
+    "year": 2021,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "type": "SUV",
+    "photoLink": "https://example.com/jeep_wrangler.jpg",
+    "description": "The Jeep Wrangler is an off-road SUV, designed for adventure with its rugged build, four-wheel drive capabilities, and open-air options.",
+    "fuelConsumption": "15.5",
+    "engineSize": "3.6L V6",
+    "accessories": [
+      "Cloth seats",
+      "Uconnect infotainment system",
+      "Removable top and doors"
+    ],
+    "functionalities": [
+      "Four-Wheel Drive",
+      "Trail Rated off-road capability",
+      "Dana front and rear axles"
+    ],
+    "rentalPrice": "$160",
+    "rentalCompany": "Off-Road Explorers Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 9000
+  },
+  {
+    "id": 95199,
+    "year": 2022,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "type": "Hatchback",
+    "photoLink": "https://example.com/volkswagen_golf.jpg",
+    "description": "The Volkswagen Golf is a versatile and practical hatchback, offering a comfortable ride, modern features, and efficient performance.",
+    "fuelConsumption": "6.8",
+    "engineSize": "1.4L turbocharged 4-cylinder",
+    "accessories": [
+      "Cloth seats",
+      "VW Car-Net App-Connect",
+      "Driver Assistance features"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Blind Spot Monitor",
+      "Rear Traffic Alert"
+    ],
+    "rentalPrice": "$120",
+    "rentalCompany": "City Hatch Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 2000
+  },
+  {
+    "id": 95200,
+    "year": 2021,
+    "make": "Ford",
+    "model": "Explorer",
+    "type": "SUV",
+    "photoLink": "https://example.com/ford_explorer.jpg",
+    "description": "The Ford Explorer is a spacious and family-friendly SUV, known for its comfortable interior, advanced safety features, and versatile cargo space.",
+    "fuelConsumption": "13.0",
+    "engineSize": "2.3L turbocharged 4-cylinder",
+    "accessories": [
+      "Leather seats",
+      "SYNC 3 infotainment system",
+      "PowerFold third-row seats"
+    ],
+    "functionalities": [
+      "Rear-Wheel Drive",
+      "Ford Co-Pilot360",
+      "Terrain Management System"
+    ],
+    "rentalPrice": "$180",
+    "rentalCompany": "Family Adventures Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+    "mileage": 11000
+  },
+  {
+    "id": 95201,
+    "year": 2022,
+    "make": "Lexus",
+    "model": "RX",
+    "type": "SUV",
+    "photoLink": "https://example.com/lexus_rx.jpg",
+    "description": "The Lexus RX is a luxury SUV, combining a smooth and quiet ride with a high-end interior and advanced safety and technology features.",
+    "fuelConsumption": "9.5",
+    "engineSize": "3.5L V6",
+    "accessories": [
+      "Leather seats",
+      "12.3-inch touchscreen display",
+      "Lexus Safety System+ 2.0"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Blind Spot Monitor",
+      "Power rear door"
+    ],
+    "rentalPrice": "$220",
+    "rentalCompany": "Luxury Drives Rentals",
+    "address": "Aurora, Illinois",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 3000
   }
 ]
