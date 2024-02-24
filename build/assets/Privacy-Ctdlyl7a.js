@@ -1,0 +1,1 @@
+import{j as r}from"./index-Dyk1zt2W.js";import{P as a,a as i}from"./Privacy.styled-D-ZLAH2R.js";import"./heroBg-xqvqUgNj.js";function e(){return r.jsx(a,{children:r.jsx(i,{children:r.jsx("span",{children:"Privacy"})})})}export{e as default};
