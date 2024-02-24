@@ -36,7 +36,7 @@ function CarItems({ items }) {
   };
 
   return (
-    <CarItem key={items.id}>
+    <CarItem>
       <CarImgWrapper>
         <CarImg src={items.img ? items.img : defaultCar} alt={items.make} />
         <HeartIconWrapper

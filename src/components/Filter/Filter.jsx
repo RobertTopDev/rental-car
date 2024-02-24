@@ -9,6 +9,13 @@ import {
   FormInputRight,
   SelectInput,
 } from "./Filter.styled";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import {
+  setBrandFilter,
+  setMileageRangeFilter,
+  setPriceFilter,
+} from "../../redux/cars/slice";
 
 // {
 //   makesData.map((option) => (
@@ -18,11 +25,19 @@ import {
 //   ));
 // }
 
-function Filter() {
+// eslint-disable-next-line react/prop-types
+function Filter({ handleSearch }) {
+  const [selectedBrand, setSelectedBrand] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const [mileageFrom, setMileageFrom] = useState("");
+  const [mileageTo, setMileageTo] = useState("");
+
+  const dispatch = useDispatch();
+
   const generatePriceOptions = () => {
     const options = [];
 
-    for (let price = 10; price <= 200; price += 10) {
+    for (let price = 10; price <= 250; price += 10) {
       options.push(
         <option key={uuid()} value={price}>
           {price} $
@@ -33,11 +48,45 @@ function Filter() {
     return options;
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const filters = {
+      brand: selectedBrand,
+      price: selectedPrice,
+      mileage: {
+        from: mileageFrom,
+        to: mileageTo,
+      },
+    };
+
+    dispatch(setBrandFilter(selectedBrand));
+    dispatch(setPriceFilter(selectedPrice));
+    dispatch(
+      setMileageRangeFilter({
+        min: mileageFrom,
+        max: mileageTo,
+      })
+    );
+
+    handleSearch(filters);
+
+    setSelectedBrand("");
+    setSelectedPrice("");
+    setMileageFrom("");
+    setMileageTo("");
+  }
+
   return (
-    <FormWrapper>
+    <FormWrapper onSubmit={handleSubmit}>
       <OptionWrapper>
         <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
-        <SelectInput id="carBrand" name="carBrand">
+        <SelectInput
+          id="carBrand"
+          name="carBrand"
+          value={selectedBrand}
+          onChange={(e) => setSelectedBrand(e.target.value)}
+        >
           <option value="" hidden>
             Enter the text
           </option>
@@ -50,7 +99,12 @@ function Filter() {
       </OptionWrapper>
       <OptionWrapper>
         <FormLabel htmlFor="price">Price / 1 hour</FormLabel>
-        <SelectInput id="price" name="price">
+        <SelectInput
+          id="price"
+          name="price"
+          value={selectedPrice}
+          onChange={(e) => setSelectedPrice(e.target.value)}
+        >
           <option value="" hidden>
             To $
           </option>
@@ -60,11 +114,21 @@ function Filter() {
       <OptionWrapper>
         <FormLabel htmlFor="mileage">Car mileage / km</FormLabel>
         <div>
-          <FormInputLeft type="text" placeholder="From" />
-          <FormInputRight type="text" placeholder="To $" />
+          <FormInputLeft
+            type="text"
+            placeholder="From"
+            value={mileageFrom}
+            onChange={(e) => setMileageFrom(e.target.value)}
+          />
+          <FormInputRight
+            type="text"
+            placeholder="To $"
+            value={mileageTo}
+            onChange={(e) => setMileageTo(e.target.value)}
+          />
         </div>
       </OptionWrapper>
-      <FormBtn>Search</FormBtn>
+      <FormBtn type="submit">Search</FormBtn>
     </FormWrapper>
   );
 }
