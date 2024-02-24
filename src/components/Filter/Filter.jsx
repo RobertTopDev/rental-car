@@ -17,14 +17,6 @@ import {
   setPriceFilter,
 } from "../../redux/cars/slice";
 
-// {
-//   makesData.map((option) => (
-//     <MenuItem key={uuid()} value={option}>
-//       {option}
-//     </MenuItem>
-//   ));
-// }
-
 // eslint-disable-next-line react/prop-types
 function Filter({ handleSearch }) {
   const [selectedBrand, setSelectedBrand] = useState("");

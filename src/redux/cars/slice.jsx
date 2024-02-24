@@ -46,22 +46,22 @@ const carsSlice = createSlice({
       .addCase(fetchCars.pending, (state) => {
         state.cars.isLoading = true;
       })
-      // .addCase(fetchCars.fulfilled, (state, action) => {
-      //   state.cars.isLoading = false;
-      //   state.cars.error = null;
-      //   // state.cars.items = action.payload;
-      //   state.cars.items = [...state.cars.items, ...action.payload];
-      // })
       .addCase(fetchCars.fulfilled, (state, action) => {
         state.cars.isLoading = false;
         state.cars.error = null;
-
-        const { total, items, page } = action.payload;
-
-        state.cars.total = total;
-        state.cars.items = [...state.cars.items, ...items];
-        state.cars.currentPage = page;
+        // state.cars.items = action.payload;
+        state.cars.items = [...state.cars.items, ...action.payload];
       })
+      // .addCase(fetchCars.fulfilled, (state, action) => {
+      //   state.cars.isLoading = false;
+      //   state.cars.error = null;
+
+      //   const { total, items, page } = action.payload;
+
+      //   state.cars.total = total;
+      //   state.cars.items = [...state.cars.items, ...items];
+      //   state.cars.currentPage = page;
+      // })
       .addCase(fetchCars.rejected, (state, action) => {
         state.cars.isLoading = false;
         state.cars.error = action.payload;
