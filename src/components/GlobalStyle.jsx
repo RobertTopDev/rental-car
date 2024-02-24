@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #f8f9fa;
+    background-color: ${(p) => p.theme.colors.mainBgColor};
     font-family: ${primaryFont};
     margin: 0;
     overflow-x: hidden;

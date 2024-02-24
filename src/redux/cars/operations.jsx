@@ -2,14 +2,14 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { URL } from "../../services/apiService";
 
-axios.defaults.baseURL = URL;
-
-export const fetchCars = createAsyncThunk("cars", async (_, thunkAPI) => {
-  try {
-    const fetchedCard = await axios.get();
-
-    console.log(fetchedCard);
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+export const fetchCars = createAsyncThunk(
+  "cars/fetchCars",
+  async (page, thunkAPI) => {
+    try {
+      const res = await axios.get(`${URL}/cars?limit=12&page=${page}`);
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
-});
+);

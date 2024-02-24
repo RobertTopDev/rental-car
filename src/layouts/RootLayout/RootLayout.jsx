@@ -5,10 +5,10 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 // eslint-disable-next-line react/prop-types
-export default function RootLayout({ toggleTheme }) {
+export default function RootLayout({ toggleTheme, isDarkTheme }) {
   return (
     <div>
-      <Header toggleTheme={toggleTheme} />
+      <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
