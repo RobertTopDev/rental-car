@@ -7,6 +7,9 @@ const initialState = {
     favorites: [],
     isLoading: false,
     error: null,
+    total: 0,
+    currentPage: 1,
+    perPage: 12,
   },
   filter: {
     brand: "",
@@ -43,32 +46,22 @@ const carsSlice = createSlice({
       .addCase(fetchCars.pending, (state) => {
         state.cars.isLoading = true;
       })
-      .addCase(fetchCars.fulfilled, (state, action) => {
-        state.cars.isLoading = false;
-        state.cars.error = null;
-        // state.cars.items = action.payload;
-        state.cars.items = [...state.cars.items, ...action.payload];
-      })
       // .addCase(fetchCars.fulfilled, (state, action) => {
       //   state.cars.isLoading = false;
       //   state.cars.error = null;
-
-      //   // Apply filters on the client side
-      //   const filteredCars = action.payload.filter((car) => {
-      //     // Add your filtering logic here
-      //     const brandFilter =
-      //       !state.filter.brand || car.make === state.filter.brand;
-      //     const priceFilter =
-      //       !state.filter.price || car.rentalPrice === state.filter.price;
-      //     const mileageFilter =
-      //       car.mileage >= state.filter.mileageRange.min &&
-      //       car.mileage <= state.filter.mileageRange.max;
-
-      //     return brandFilter && priceFilter && mileageFilter;
-      //   });
-
-      //   state.cars.items = filteredCars;
+      //   // state.cars.items = action.payload;
+      //   state.cars.items = [...state.cars.items, ...action.payload];
       // })
+      .addCase(fetchCars.fulfilled, (state, action) => {
+        state.cars.isLoading = false;
+        state.cars.error = null;
+
+        const { total, items, page } = action.payload;
+
+        state.cars.total = total;
+        state.cars.items = [...state.cars.items, ...items];
+        state.cars.currentPage = page;
+      })
       .addCase(fetchCars.rejected, (state, action) => {
         state.cars.isLoading = false;
         state.cars.error = action.payload;
