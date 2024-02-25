@@ -50,12 +50,13 @@ function Filter({ handlePage }) {
     return options;
   };
 
-  const handleOptionClick = (value) => {
-    setSelectedBrand(value);
+  const handleOptionClick = (brand) => {
+    setSelectedBrand(brand);
     setIsOpen(false);
   };
-  const handleOptionPriceClick = (value) => {
-    setSelectedBrand(value);
+
+  const handleOptionPriceClick = (price) => {
+    setSelectedPrice(price);
     setIsOpenPrice(false);
   };
 
@@ -64,7 +65,7 @@ function Filter({ handlePage }) {
 
     const filters = {
       brand: selectedBrand,
-      price: selectedPrice || "500",
+      price: selectedPrice || "250",
       mileage: {
         from: mileageFrom || "0",
         to: mileageTo || "15000",
