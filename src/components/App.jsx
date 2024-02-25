@@ -80,6 +80,15 @@ function App() {
     return savedTheme === "light" ? false : true;
   });
 
+  const scrollToTop = () => {
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   const toggleTheme = () => {
     setIsDarkTheme((prevIsDarkTheme) => !prevIsDarkTheme);
     localStorage.setItem("theme", isDarkTheme ? "light" : "dark");
@@ -96,9 +105,9 @@ function App() {
         <Route index element={<Home />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="favorites" element={<Favorites />} />
-        <Route path="privacy" element={<Privacy />} />
-        <Route path="terms" element={<Terms />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="privacy" element={<Privacy scrollToTop={scrollToTop} />} />
+        <Route path="terms" element={<Terms scrollToTop={scrollToTop} />} />
+        <Route path="*" element={<NotFound scrollToTop={scrollToTop} />} />
       </Route>
     )
   );

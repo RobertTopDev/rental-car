@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const HomeContainer = styled.div`
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 `;
 

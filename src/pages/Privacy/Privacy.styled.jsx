@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import heroImg from "@/assets/heroBg.jpg";
+import { primaryFont } from "../../components/fonts";
 
 export const PrivacyContainer = styled.div`
   min-height: 100vh;
-  height: 100vh;
   margin: 0 auto;
 `;
 
@@ -18,6 +18,9 @@ export const PrivacyWrapper = styled.div`
   z-index: 1;
   padding: 1.2rem 0 1.2rem 1.2rem;
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
 
   &::before {
     content: "";
@@ -46,4 +49,67 @@ export const PrivacyWrapper = styled.div`
     min-height: 60rem;
     padding: 3.2rem;
   }
+`;
+
+export const PrivacyTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 2.4rem;
+  width: 60%;
+  background-color: ${(p) => p.theme.colors.heroBgLowOp};
+  border-radius: 1.2rem;
+  backdrop-filter: blur(5px);
+
+  height: 100%;
+`;
+
+export const PrivacyTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+`;
+
+export const PrivacyTitle = styled.h2`
+  color: ${(p) => p.theme.colors.lightWhiteColor};
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+`;
+
+export const PrivacySubTitle = styled.h3`
+  color: ${(p) => p.theme.colors.lightWhiteColor};
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+`;
+
+export const PrivacyText = styled.p`
+  color: ${(p) => p.theme.colors.lightWhiteColor};
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+`;
+
+export const PrivacySubText = styled.p`
+  color: ${(p) => p.theme.colors.lightWhiteColor};
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+`;
+
+export const PrivacyRulesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 `;

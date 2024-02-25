@@ -1,12 +1,12 @@
-import{u as e,j as i}from"./index-CVL9R2Vk.js";import{h as o}from"./heroBg-xqvqUgNj.js";const n=e.div`
+import{u as i}from"./index-D2SB-icw.js";import{h as e}from"./heroBg-xqvqUgNj.js";const t=i.div`
   min-height: 100vh;
   height: 100vh;
   margin: 0 auto;
-`,t=e.div`
+`,n=i.div`
   position: relative;
   width: 100%;
   min-height: 100%;
-  background: url(${o});
+  background: url(${e});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -41,4 +41,4 @@ import{u as e,j as i}from"./index-CVL9R2Vk.js";import{h as o}from"./heroBg-xqvqU
     min-height: 60rem;
     padding: 3.2rem;
   }
-`;function a(){return i.jsx(n,{children:i.jsx(t,{children:"404 Oops! Page Not Found!"})})}export{a as default};
+`;export{t as P,n as a};
