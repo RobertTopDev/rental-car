@@ -1,12 +1,12 @@
-import{u as o,p as i,j as e,H as r,a as n}from"./index-D2SB-icw.js";import{h as s}from"./heroBg-xqvqUgNj.js";const a=o.div`
+import{u as o,p as r,r as i,j as e,H as n,a as s}from"./index-Btp4t5aC.js";import{h as a}from"./heroBg-xqvqUgNj.js";const d=o.div`
   min-height: 100vh;
   height: 100vh;
   margin: 0 auto;
-`,d=o.div`
+`,l=o.div`
   position: relative;
   width: 100%;
   min-height: 100%;
-  background: url(${s});
+  background: url(${a});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -44,7 +44,7 @@ import{u as o,p as i,j as e,H as r,a as n}from"./index-D2SB-icw.js";import{h as 
     min-height: 60rem;
     padding: 3.2rem;
   }
-`,l=o.div`
+`,h=o.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,18 +56,18 @@ import{u as o,p as i,j as e,H as r,a as n}from"./index-D2SB-icw.js";import{h as 
   backdrop-filter: blur(5px);
 
   height: 100%;
-`,h=o.h2`
+`,u=o.h2`
   color: ${t=>t.theme.colors.lightWhiteColor};
-  font-family: ${i};
+  font-family: ${r};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`,u=o.p`
+`,c=o.p`
   color: ${t=>t.theme.colors.lightWhiteColor};
-  font-family: ${i};
+  font-family: ${r};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`;function p(){return e.jsxs(e.Fragment,{children:[e.jsx(r,{children:e.jsxs(n,{children:[e.jsx("title",{children:"Cruise Wheels - 404 Not Found"}),e.jsx("meta",{name:"description",content:"Oops! It looks like you've taken a wrong turn. Explore Cruise Wheels' official site and discover stylish and comfortable car rentals for your next adventure."}),e.jsx("meta",{name:"keywords",content:"404 not found, wrong turn, Cruise Wheels, car rentals, adventure"})]})}),e.jsx(a,{children:e.jsx(d,{children:e.jsxs(l,{children:[e.jsx(h,{children:"404 Oops! Page Not Found!"}),e.jsx(u,{children:"Uh-oh! It seems like you've stumbled upon a road less traveled, and our GPS got a bit confused. Don't worry, getting lost is just part of the adventure! While we figure out the best route, why not explore Cruise Wheels' main page? You're bound to find stylish and comfy rides for your next epic journey. Trust us: it's all part of the scenic route!"})]})})})]})}export{p as default};
+`;function g({scrollToTop:t}){return i.useEffect(()=>{t()},[]),e.jsxs(e.Fragment,{children:[e.jsx(n,{children:e.jsxs(s,{children:[e.jsx("title",{children:"Cruise Wheels - 404 Not Found"}),e.jsx("meta",{name:"description",content:"Oops! It looks like you've taken a wrong turn. Explore Cruise Wheels' official site and discover stylish and comfortable car rentals for your next adventure."}),e.jsx("meta",{name:"keywords",content:"404 not found, wrong turn, Cruise Wheels, car rentals, adventure"})]})}),e.jsx(d,{children:e.jsx(l,{children:e.jsxs(h,{children:[e.jsx(u,{children:"404 Oops! Page Not Found!"}),e.jsx(c,{children:"Uh-oh! It seems like you've stumbled upon a road less traveled, and our GPS got a bit confused. Don't worry, getting lost is just part of the adventure! While we figure out the best route, why not explore Cruise Wheels' main page? You're bound to find stylish and comfy rides for your next epic journey. Trust us: it's all part of the scenic route!"})]})})})]})}export{g as default};
