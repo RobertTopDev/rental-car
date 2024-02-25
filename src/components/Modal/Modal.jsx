@@ -10,26 +10,32 @@ import {
   ModalTitleDescrContainer,
   ModalTextContainer,
   ModalBtn,
+  ModalDescr,
+  ModalDiv,
+  ModalDescrText,
+  ModalCondition,
+  ModalConditionWrapper,
+  ModalConditionContainer,
 } from "./Modal.styled";
-import Modal from "react-modal";
+// import Modal from "react-modal";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    margin: "24px",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    borderRadius: "14px",
-    padding: "4rem",
-    width: "54rem",
-    height: "75.2rem",
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     margin: "24px",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//     borderRadius: "14px",
+//     padding: "4rem",
+//     width: "54rem",
+//     height: "75.2rem",
+//     backgroundColor: `${(p) => p.theme.colors.black}`,
+//   },
+// };
 
 // eslint-disable-next-line no-unused-vars
 function ModalPopUp({ items }) {
-  let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -40,15 +46,17 @@ function ModalPopUp({ items }) {
     setIsOpen(false);
   }
 
+  console.log(items);
+
   return (
     <>
       <CardBtn type="button" onClick={openModal}>
         Learn More
       </CardBtn>
-      <Modal
+      <ModalDiv
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
+        // style={customStyles}
         contentLabel="Example Modal"
       >
         <ModalWrapper>
@@ -62,32 +70,49 @@ function ModalPopUp({ items }) {
                 </ModalTitleWrapper>
                 <div>
                   <div>
-                    <span>{items.address}</span>
-                    <span> | Id: {items.id}</span>
-                    <span> | Year: {items.year}</span>
-                    <span> | Type: {items.type}</span>
+                    <ModalDescr>{items.address}</ModalDescr>
+                    <ModalDescr> | Id: {items.id}</ModalDescr>
+                    <ModalDescr> | Year: {items.year}</ModalDescr>
+                    <ModalDescr> | Type: {items.type}</ModalDescr>
                   </div>
                   <div>
-                    <span>Fuel Consumption: {items.fuelConsumption}</span>
-                    <span> | Engine Size: {items.engineSize}</span>
+                    <ModalDescr>
+                      Fuel Consumption: {items.fuelConsumption}
+                    </ModalDescr>
+                    <ModalDescr> | Engine Size: {items.engineSize}</ModalDescr>
                   </div>
                 </div>
               </ModalTitleContainer>
-              <p>{items.description}</p>
+              <ModalDescrText>{items.description}</ModalDescrText>
             </ModalTitleDescrContainer>
             <div>
-              <p>Accessories and functionalities:</p>
+              <ModalDescrText style={{ fontFamily: "500" }}>
+                Accessories and functionalities:
+              </ModalDescrText>
               <div>
-                {items.accessories.map((item) => (
-                  <span key={item}>{item}</span>
+                {items.accessories.map((item, index) => (
+                  <ModalDescr key={item}>
+                    {item}
+                    {index !== items.accessories.length - 1 && <span> | </span>}
+                  </ModalDescr>
                 ))}
               </div>
             </div>
             <div>
-              <div>
-                <p>Rental Conditions: </p>
-                <div>{items.rentalConditions}</div>
-              </div>
+              <ModalConditionContainer>
+                <ModalDescrText style={{ fontFamily: "500" }}>
+                  Rental Conditions:{" "}
+                </ModalDescrText>
+                <ModalConditionWrapper>
+                  {items.rentalConditions
+                    .split("\n")
+                    .map((condition, index) => (
+                      <ModalCondition key={index}>
+                        {condition.trim()}
+                      </ModalCondition>
+                    ))}
+                </ModalConditionWrapper>
+              </ModalConditionContainer>
               <span>Mileage: {items.mileage}</span>
               <span>Price: {items.price}</span>
             </div>
@@ -96,7 +121,7 @@ function ModalPopUp({ items }) {
             </div>
           </ModalTextContainer>
         </ModalWrapper>
-      </Modal>
+      </ModalDiv>
     </>
   );
 }

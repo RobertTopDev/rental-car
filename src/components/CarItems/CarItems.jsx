@@ -59,9 +59,7 @@ function CarItems({ items, handleFavoriteToggle }) {
           </CartItemTitleWrapper>
           <div>
             <div>
-              <CardItemTextDescr>
-                <CardItemTextDescr>{items.address}</CardItemTextDescr>
-              </CardItemTextDescr>
+              <CardItemTextDescr>{items.address}</CardItemTextDescr>
               <CardItemTextDescr> | {items.rentalCompany}</CardItemTextDescr>
             </div>
             <div>

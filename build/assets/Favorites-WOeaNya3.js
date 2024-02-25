@@ -1,0 +1,1 @@
+import{e as r,j as s}from"./index-BvGlqA_N.js";import{b as t}from"./selectors-Dv-9MmlI.js";function l(){const e=r(t);return console.log(e),s.jsx("div",{children:e==null?void 0:e.map(o=>s.jsx("div",{children:s.jsx("p",{children:o.name})},o.id))})}export{l as default};
