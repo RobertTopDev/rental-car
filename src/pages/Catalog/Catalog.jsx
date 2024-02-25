@@ -47,21 +47,10 @@ function Catalog() {
   useEffect(() => {
     async function fetchedData() {
       try {
-        const response = await dispatch(fetchAllCars());
-        setDisplayedCars(response.payload);
+        const allCarsResponse = await dispatch(fetchAllCars());
+        setDisplayedCars(allCarsResponse.payload);
 
-        // Fetch the initial set of cars with a limit
         await dispatch(fetchCars(page)).unwrap();
-        // .then((res) => {
-        //   const newCars = res;
-
-        //   if (newCars.length > 0) {
-        //     setDisplayedCars((prevCars) => [...prevCars, ...newCars]);
-        //     setShowLoadBtn(newCars.length === 12);
-        //   } else {
-        //     setShowLoadBtn(false);
-        //   }
-        // })
       } catch (error) {
         console.log(error.message);
       } finally {
@@ -90,19 +79,19 @@ function Catalog() {
       <CarsMenu>
         {initialLoading ? (
           <Loader />
-        ) : visibleCars.length === 0 && filteredCars.brand.length > 0 ? (
+        ) : visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
           <li>No matching cars found</li>
-        ) : visibleCars.length > 0 ? (
-          visibleCars.map((items) => {
+        ) : visibleCars?.length > 0 ? (
+          visibleCars?.map((items) => {
             return <CarItems key={uuid()} items={items} />;
           })
         ) : (
-          cars.map((items) => {
+          cars?.map((items) => {
             return <CarItems key={uuid()} items={items} />;
           })
         )}
       </CarsMenu>
-      {setShowLoadBtn && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
+      {showLoadBtn && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
     </CatalogContainer>
   );
 }
