@@ -2,15 +2,30 @@
   "name": "Cruise Wheels",
   "author": "Alex Smagin",
   "homepage": "http://Alexandrbig1.github.io/rental-car",
-  "description": "This is a rental car project.",
+  "description": "Discover unforgettable journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Your gateway to extraordinary adventures.",
   "keywords": [
+    "car rental",
+    "adventure",
+    "travel",
+    "Cruise Wheels",
+    "style",
+    "comfort",
+    "confidence",
     "react",
+    "fullstack",
+    "api",
     "frontend",
-    "vite"
+    "redux",
+    "styled component"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alexandrbig1/rental-car"
+  },
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "main": "main.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
