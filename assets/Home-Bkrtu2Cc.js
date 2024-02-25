@@ -1,12 +1,12 @@
-import{u as r,p as i,L as t,j as o}from"./index-CVL9R2Vk.js";import{h as n}from"./heroBg-xqvqUgNj.js";const a=r.div`
+import{u as o,p as t,L as i,j as r,H as n,a}from"./index-D2SB-icw.js";import{h as s}from"./heroBg-xqvqUgNj.js";const l=o.div`
   min-height: 100vh;
   height: 100vh;
   margin: 0 auto;
-`,l=r.div`
+`,d=o.div`
   position: relative;
   width: 100%;
   min-height: 100%;
-  background: url(${n});
+  background: url(${s});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -45,7 +45,7 @@ import{u as r,p as i,L as t,j as o}from"./index-CVL9R2Vk.js";import{h as n}from"
     min-height: 60rem;
     padding: 3.2rem;
   }
-`,s=r.div`
+`,c=o.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -54,13 +54,13 @@ import{u as r,p as i,L as t,j as o}from"./index-CVL9R2Vk.js";import{h as n}from"
   background-color: ${e=>e.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
-`,d=r.h1`
-  font-family: ${i};
+`,h=o.h1`
+  font-family: ${t};
   font-weight: 400;
   font-size: 48px;
   line-height: 1;
   color: ${e=>e.theme.colors.lightWhiteColor};
-`,h=r.span`
+`,m=o.span`
   font-size: 54px;
   font-weight: 500;
   color: ${e=>e.theme.colors.accentColor};
@@ -78,14 +78,14 @@ import{u as r,p as i,L as t,j as o}from"./index-CVL9R2Vk.js";import{h as n}from"
     color: ${e=>e.theme.colors.lightWhiteColor};
     z-index: -5;
   }
-`,c=r.p`
+`,u=o.p`
   color: ${e=>e.theme.colors.lightWhiteColor};
-  font-family: ${i};
+  font-family: ${t};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`,m=r(t)`
+`,g=o(i)`
   background: none;
   outline: none;
   border: none;
@@ -98,4 +98,4 @@ import{u as r,p as i,L as t,j as o}from"./index-CVL9R2Vk.js";import{h as n}from"
   &:hover {
     background-color: ${e=>e.theme.colors.accentColorHover};
   }
-`;function u(){return o.jsx(a,{children:o.jsx(l,{children:o.jsxs(s,{children:[o.jsxs(d,{children:["Drive Your Dreams: Explore the World with"," ",o.jsx(h,{children:"Cruise Wheels"})," Rental Cars"]}),o.jsx(c,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),o.jsx("div",{style:{textAlign:"end"},children:o.jsx(m,{to:"catalog",children:"View or Catalog"})})]})})})}export{u as default};
+`;function f(){return r.jsxs(r.Fragment,{children:[r.jsx(n,{children:r.jsxs(a,{children:[r.jsx("title",{children:"Cruise Wheels - Home Page"}),r.jsx("meta",{name:"description",content:"Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."}),r.jsx("meta",{name:"keywords",content:"car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),r.jsx(l,{children:r.jsx(d,{children:r.jsxs(c,{children:[r.jsxs(h,{children:["Drive Your Dreams: Explore the World with"," ",r.jsx(m,{children:"Cruise Wheels"})," Rental Cars"]}),r.jsx(u,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),r.jsx("div",{style:{textAlign:"end"},children:r.jsx(g,{to:"catalog",children:"View or Catalog"})})]})})})]})}export{f as default};
