@@ -12,7 +12,7 @@ export const HomeContainer = styled.div`
 export const HeroWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background: url(${heroImg});
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,8 +22,6 @@ export const HeroWrapper = styled.div`
   overflow: hidden;
 
   display: flex;
-  align-items: end;
-  justify-content: end;
 
   &::before {
     content: "";
@@ -41,16 +39,20 @@ export const HeroWrapper = styled.div`
     padding: 1.2rem;
   }
 
+  @media (min-width: 620px) {
+    justify-content: end;
+  }
+
   @media (min-width: 768px) {
-    background-size: 100%;
-    min-height: auto;
     padding: 3.2rem;
     overflow: visible;
   }
 
   @media (min-width: 1440px) {
-    min-height: 60rem;
     padding: 3.2rem;
+
+    align-items: end;
+    justify-content: end;
   }
 `;
 
@@ -59,37 +61,52 @@ export const HeroTextWrapper = styled.div`
   flex-direction: column;
   gap: 3.2rem;
   padding: 2.4rem;
-  width: 60%;
+  width: 60rem;
+  height: 100%;
+
   background-color: ${(p) => p.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
+
+  @media (min-width: 1440px) {
+    width: 82.6rem;
+  }
+
+  @media (min-width: 1440px) {
+    width: 82.6rem;
+  }
 `;
 
 export const HeroTitle = styled.h1`
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 48px;
+  font-size: 18px;
   line-height: 1;
   color: ${(p) => p.theme.colors.lightWhiteColor};
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 48px;
+  }
 `;
 
 export const HeroTitleSpan = styled.span`
-  font-size: 54px;
+  font-size: 24px;
   font-weight: 500;
   color: ${(p) => p.theme.colors.accentColor};
 
   position: relative;
   z-index: 200;
 
-  &::before {
-    content: "Cruise Wheels";
-    position: absolute;
-    top: 0.5rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: ${(p) => p.theme.colors.lightWhiteColor};
-    z-index: -5;
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 54px;
   }
 `;
 
@@ -97,9 +114,13 @@ export const HeroText = styled.p`
   color: ${(p) => p.theme.colors.lightWhiteColor};
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const CatalogBtn = styled(Link)`
