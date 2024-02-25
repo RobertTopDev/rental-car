@@ -1,6 +1,6 @@
-import{u as o,p as t,L as i,j as r,H as n,a}from"./index-D2SB-icw.js";import{h as s}from"./heroBg-xqvqUgNj.js";const l=o.div`
+import{u as o,p as t,L as i,j as r,H as n,a}from"./index-Btp4t5aC.js";import{h as s}from"./heroBg-xqvqUgNj.js";const l=o.div`
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 `,d=o.div`
   position: relative;
