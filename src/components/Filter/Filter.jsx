@@ -1,5 +1,6 @@
 import makesData from "../../../makes.json";
 import { v4 as uuid } from "uuid";
+import CreatableSelect from "react-select/creatable";
 import {
   FormBtn,
   FormLabel,
@@ -8,6 +9,9 @@ import {
   FormInputLeft,
   FormInputRight,
   SelectInput,
+  SelectedOption,
+  SelectedOptionText,
+  // SelectOptions,
 } from "./Filter.styled";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -24,6 +28,9 @@ function Filter({ handlePage }) {
   const [mileageFrom, setMileageFrom] = useState("");
   const [mileageTo, setMileageTo] = useState("");
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenPrice, setIsOpenPrice] = useState(false);
+
   const dispatch = useDispatch();
 
   const generatePriceOptions = () => {
@@ -31,13 +38,25 @@ function Filter({ handlePage }) {
 
     for (let price = 10; price <= 250; price += 10) {
       options.push(
-        <option key={uuid()} value={price}>
+        <SelectedOptionText
+          key={uuid()}
+          onClick={() => handleOptionPriceClick(price)}
+        >
           {price} $
-        </option>
+        </SelectedOptionText>
       );
     }
 
     return options;
+  };
+
+  const handleOptionClick = (value) => {
+    setSelectedBrand(value);
+    setIsOpen(false);
+  };
+  const handleOptionPriceClick = (value) => {
+    setSelectedBrand(value);
+    setIsOpenPrice(false);
   };
 
   function handleSubmit(e) {
@@ -76,35 +95,30 @@ function Filter({ handlePage }) {
     <FormWrapper onSubmit={handleSubmit}>
       <OptionWrapper>
         <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
-        <SelectInput
-          id="carBrand"
-          name="carBrand"
-          value={selectedBrand}
-          onChange={(e) => setSelectedBrand(e.target.value)}
-        >
-          <option value="" hidden>
-            Enter the text
-          </option>
-          {makesData.map((option) => (
-            <option key={uuid()} value={option}>
-              {option}
-            </option>
-          ))}
+        <SelectInput onClick={() => setIsOpen(!isOpen)}>
+          {selectedBrand || "Enter the text"}
         </SelectInput>
+        {isOpen && (
+          <SelectedOption>
+            {makesData.map((option) => (
+              <SelectedOptionText
+                key={option}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option}
+              </SelectedOptionText>
+            ))}
+          </SelectedOption>
+        )}
       </OptionWrapper>
       <OptionWrapper>
         <FormLabel htmlFor="price">Price / 1 hour</FormLabel>
-        <SelectInput
-          id="price"
-          name="price"
-          value={selectedPrice}
-          onChange={(e) => setSelectedPrice(e.target.value)}
-        >
-          <option value="" hidden>
-            To $
-          </option>
-          {generatePriceOptions()}
+        <SelectInput onClick={() => setIsOpenPrice(!isOpenPrice)}>
+          {selectedPrice || "To $"}
         </SelectInput>
+        {isOpenPrice && (
+          <SelectedOption>{generatePriceOptions()}</SelectedOption>
+        )}
       </OptionWrapper>
       <OptionWrapper>
         <FormLabel htmlFor="mileage">Car mileage / km</FormLabel>

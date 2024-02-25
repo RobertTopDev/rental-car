@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
+import CreatableSelect from "react-select/creatable";
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -31,7 +32,8 @@ export const FormBtn = styled.button`
   }
 `;
 
-export const SelectInput = styled.select`
+export const SelectInput = styled.div`
+  position: relative;
   border: none;
   outline: none;
   background: none;
@@ -39,12 +41,62 @@ export const SelectInput = styled.select`
   background-color: ${(p) => p.theme.colors.inputBgColor};
   padding: 1.4rem 1.8rem;
   height: 4.8rem;
+  width: 22.4rem;
+
+  appearance: none;
 
   font-family: ${primaryFont};
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
   color: ${(p) => p.theme.colors.black};
+  transition: all var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.inputBgColorHover};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+`;
+
+export const SelectedOption = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 27.2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(18, 20, 23, 0.05);
+  border-radius: 1.4rem;
+  overflow-y: scroll;
+
+  padding: 1.4rem 1.8rem;
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+`;
+
+export const SelectedOptionText = styled.span`
+  font-family: ${primaryFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: ${(p) => p.theme.colors.mainTextColorVeryLowOp};
+  transition: all var(--primary-transition);
+
+  &:hover {
+    cursor: pointer;
+    color: ${(p) => p.theme.colors.mainTextColor};
+  }
 `;
 
 export const FormLabel = styled.label`
@@ -71,12 +123,23 @@ export const FormInputRight = styled.input`
   line-height: 1.11111;
   color: ${(p) => p.theme.colors.black};
 
+  transition: all var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.inputBgColorHover};
+  }
+
   &::placeholder {
     font-family: ${primaryFont};
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.11111;
     color: ${(p) => p.theme.colors.black};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 `;
 export const FormInputLeft = styled.input`
@@ -96,12 +159,23 @@ export const FormInputLeft = styled.input`
   line-height: 1.11111;
   color: ${(p) => p.theme.colors.black};
 
+  transition: all var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.inputBgColorHover};
+  }
+
   &::placeholder {
     font-family: ${primaryFont};
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.11111;
     color: ${(p) => p.theme.colors.black};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${(p) => p.theme.colors.boxFocus} 0px 7px 29px 0px;
   }
 `;
 

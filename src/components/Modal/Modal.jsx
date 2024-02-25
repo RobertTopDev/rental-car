@@ -112,7 +112,7 @@ function ModalPopUp({ items }) {
                   <ModalConditionAdd>
                     Mileage:{" "}
                     <ModalConditionAccentColor>
-                      {items.mileage}
+                      {parseInt(items.mileage).toLocaleString()}
                     </ModalConditionAccentColor>
                   </ModalConditionAdd>
                   <ModalConditionAdd>

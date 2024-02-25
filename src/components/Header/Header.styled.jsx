@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
 
@@ -23,8 +23,11 @@ export const NavBar = styled.nav`
   gap: 1.2rem;
 `;
 
-export const HeaderLink = styled(NavLink)`
-  color: ${(p) => p.theme.colors.mainTextColorLowOp};
+export const HeaderLink = styled(Link)`
+  color: ${(p) =>
+    p?.$active
+      ? p.theme.colors.mainTextColor
+      : p.theme.colors.mainTextColorLowOp};
   font-family: ${primaryFont};
   font-size: 1.6rem;
   font-style: normal;
@@ -68,9 +71,5 @@ export const HeaderLink = styled(NavLink)`
 
   &:hover:before {
     width: 50%;
-  }
-
-  &.active {
-    color: ${(p) => p.theme.colors.mainTextColor};
   }
 `;

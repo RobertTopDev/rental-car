@@ -65,7 +65,10 @@ function CarItems({ items, handleFavoriteToggle }) {
             <div>
               <CardItemTextDescr>{items.type}</CardItemTextDescr>
               <CardItemTextDescr> | {items.model}</CardItemTextDescr>
-              <CardItemTextDescr> | miles: {items.mileage}</CardItemTextDescr>
+              <CardItemTextDescr>
+                {" "}
+                | miles: {parseInt(items.mileage).toLocaleString()}
+              </CardItemTextDescr>
             </div>
           </div>
         </CardInfoWrapper>

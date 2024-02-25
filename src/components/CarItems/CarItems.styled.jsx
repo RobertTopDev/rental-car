@@ -104,7 +104,7 @@ export const HeartIconWrapper = styled.div`
 
 export const EmptyHeartIcon = styled(FaRegHeart)`
   font-size: 2rem;
-  color: ${(p) => p.theme.colors.mainTextColorLowOp};
+  color: ${(p) => p.theme.colors.emptyHeart};
 
   transition: all var(--primary-transition);
 
