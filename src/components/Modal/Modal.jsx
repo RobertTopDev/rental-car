@@ -1,16 +1,29 @@
-import Modal from "react-modal";
 import { CardBtn } from "../CarItems/CarItems.styled";
 import { useState } from "react";
-import { ModalImg, ModalWrapper } from "./Modal.styled";
+import {
+  ModalImg,
+  ModalTitle,
+  ModalTitleText,
+  ModalWrapper,
+  ModalTitleWrapper,
+  ModalTitleContainer,
+  ModalTitleDescrContainer,
+  ModalTextContainer,
+  ModalBtn,
+} from "./Modal.styled";
+import Modal from "react-modal";
 
 const customStyles = {
   content: {
     top: "50%",
     left: "50%",
-    right: "auto",
-    bottom: "auto",
+    margin: "24px",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    borderRadius: "14px",
+    padding: "4rem",
+    width: "54rem",
+    height: "75.2rem",
   },
 };
 
@@ -21,11 +34,6 @@ function ModalPopUp({ items }) {
 
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
   }
 
   function closeModal() {
@@ -39,40 +47,43 @@ function ModalPopUp({ items }) {
       </CardBtn>
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
       >
         <ModalWrapper>
           <ModalImg src={items.img} alt="" />
-          <div>
-            <div>
-              <div>
-                <h2>{items.make}</h2>
-                <p>, {items.year}</p>
-              </div>
-              <div>
-                <span>{items.address}</span>
-                <span> | Id: {items.id}</span>
-                <span> | Year: {items.year}</span>
-                <span> | Type: {items.type}</span>
-              </div>
-              <div>
-                <span>Fuel Consumption: {items.fuelConsumption}</span>
-                <span> | Engine Size: {items.engineSize}</span>
-              </div>
-              <div>
-                <p>{items.description}</p>
-              </div>
-              <div>
-                <p>Accessories and functionalities:</p>
+          <ModalTextContainer>
+            <ModalTitleDescrContainer>
+              <ModalTitleContainer>
+                <ModalTitleWrapper>
+                  <ModalTitle>{items.make}</ModalTitle>
+                  <ModalTitleText>, {items.year}</ModalTitleText>
+                </ModalTitleWrapper>
                 <div>
-                  {items.accessories.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
+                  <div>
+                    <span>{items.address}</span>
+                    <span> | Id: {items.id}</span>
+                    <span> | Year: {items.year}</span>
+                    <span> | Type: {items.type}</span>
+                  </div>
+                  <div>
+                    <span>Fuel Consumption: {items.fuelConsumption}</span>
+                    <span> | Engine Size: {items.engineSize}</span>
+                  </div>
                 </div>
+              </ModalTitleContainer>
+              <p>{items.description}</p>
+            </ModalTitleDescrContainer>
+            <div>
+              <p>Accessories and functionalities:</p>
+              <div>
+                {items.accessories.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
               </div>
+            </div>
+            <div>
               <div>
                 <p>Rental Conditions: </p>
                 <div>{items.rentalConditions}</div>
@@ -80,8 +91,10 @@ function ModalPopUp({ items }) {
               <span>Mileage: {items.mileage}</span>
               <span>Price: {items.price}</span>
             </div>
-          </div>
-          <button>Rent A Car</button>
+            <div>
+              <ModalBtn>Rent A Car</ModalBtn>
+            </div>
+          </ModalTextContainer>
         </ModalWrapper>
       </Modal>
     </>
