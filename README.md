@@ -23,6 +23,14 @@ Welcome to Cruise Wheels, a React Redux project built on Vite that allows you to
 - [Technologies Used](#technologies-used)
 - [License](#license)
 
+### Screenshots:
+
+![Task Pro App](/public/images/screenshots/cruise1.jpg) _Caption for Screenshot 1
+(Home Page Dark Theme)_
+
+![Task Pro App](/public/images/screenshots/cruise2.jpg) _Caption for Screenshot 2
+(Catalog Page Dark Theme)_
+
 ## Features
 
 - **Intuitive User Interface**: Crafted with @mui/material and styled with @emotion/styled for a sleek and user-friendly experience.
