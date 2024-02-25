@@ -15,9 +15,15 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterMainWrapper = styled.div`
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+  }
 `;
 
 export const FooterContactAddressContainer = styled.div`
@@ -52,7 +58,13 @@ export const FooterContactIconLink = styled.a`
 
 export const FooterContactBtnsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const FooterContactIcons = styled.div`
@@ -147,8 +159,14 @@ export const FooterInfoWrapper = styled.div`
   border-top: 1px solid ${(p) => p.theme.colors.mainTextColorLowOp};
   padding: 1.2rem 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 export const FooterInfoText = styled.p`
