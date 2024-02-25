@@ -16,24 +16,20 @@ import {
   CarImgWrapper,
   HeartIconWrapper,
 } from "./CarItems.styled";
+import ModalPopUp from "../Modal/Modal";
+// import { useDispatch } from "react-redux";
+// import { toggleFavorite } from "../../redux/cars/slice";
 
 /* eslint-disable react/prop-types */
-function CarItems({ items }) {
+function CarItems({ items, handleFavoriteToggle }) {
   const [favorite, setFavorite] = useState(false);
+  // const dispatch = useDispatch();
 
-  const renderAddress = (fullAddress) => {
-    const addressParts = fullAddress.split(",");
+  function handleFavoriteBtn() {
+    setFavorite((prevState) => !prevState);
 
-    const city = addressParts[addressParts.length - 2]?.trim() || "";
-    const country = addressParts[addressParts.length - 1]?.trim() || "";
-
-    return (
-      <>
-        <CardItemTextDescr>{city}</CardItemTextDescr>
-        <CardItemTextDescr> | {country}</CardItemTextDescr>
-      </>
-    );
-  };
+    handleFavoriteToggle(items.id);
+  }
 
   return (
     <CarItem>
@@ -48,9 +44,7 @@ function CarItems({ items }) {
           }
           alt={items.make}
         />
-        <HeartIconWrapper
-          onClick={() => setFavorite((prevState) => !prevState)}
-        >
+        <HeartIconWrapper onClick={handleFavoriteBtn}>
           {favorite ? <FavoriteHeartIcon /> : <EmptyHeartIcon />}
         </HeartIconWrapper>
       </CarImgWrapper>
@@ -66,7 +60,7 @@ function CarItems({ items }) {
           <div>
             <div>
               <CardItemTextDescr>
-                {renderAddress(items.address)}
+                <CardItemTextDescr>{items.address}</CardItemTextDescr>
               </CardItemTextDescr>
               <CardItemTextDescr> | {items.rentalCompany}</CardItemTextDescr>
             </div>
@@ -77,7 +71,7 @@ function CarItems({ items }) {
             </div>
           </div>
         </CardInfoWrapper>
-        <CardBtn>Learn More</CardBtn>
+        <ModalPopUp items={items} />
       </CardInfoContainer>
     </CarItem>
   );

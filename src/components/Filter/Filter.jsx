@@ -18,7 +18,7 @@ import {
 } from "../../redux/cars/slice";
 
 // eslint-disable-next-line react/prop-types
-function Filter({ handleSearch }) {
+function Filter({ handlePage }) {
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
   const [mileageFrom, setMileageFrom] = useState("");
@@ -45,23 +45,26 @@ function Filter({ handleSearch }) {
 
     const filters = {
       brand: selectedBrand,
-      price: selectedPrice,
+      price: selectedPrice || "500",
       mileage: {
-        from: mileageFrom,
-        to: mileageTo,
+        from: mileageFrom || "0",
+        to: mileageTo || "15000",
       },
     };
+    if (selectedPrice === "") {
+      setSelectedPrice("250");
+    }
 
-    dispatch(setBrandFilter(selectedBrand));
-    dispatch(setPriceFilter(selectedPrice));
+    dispatch(setBrandFilter(filters.brand));
+    dispatch(setPriceFilter(filters.price));
     dispatch(
       setMileageRangeFilter({
-        min: mileageFrom,
-        max: mileageTo,
+        min: filters.mileage.from,
+        max: filters.mileage.to,
       })
     );
 
-    handleSearch(filters);
+    handlePage();
 
     setSelectedBrand("");
     setSelectedPrice("");

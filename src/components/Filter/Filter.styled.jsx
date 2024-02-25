@@ -11,6 +11,8 @@ export const OptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+
+  position: relative;
 `;
 
 export const FormBtn = styled.button`
@@ -101,4 +103,11 @@ export const FormInputLeft = styled.input`
     line-height: 1.11111;
     color: ${(p) => p.theme.colors.black};
   }
+`;
+
+export const ErrorMessage = styled.p`
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;

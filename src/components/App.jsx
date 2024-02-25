@@ -85,7 +85,7 @@ function App() {
           <RootLayout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         }
       >
-        <Route path="/rental-car/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="privacy" element={<Privacy />} />

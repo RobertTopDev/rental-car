@@ -10,7 +10,7 @@ const initialState = {
   },
   filter: {
     brand: "",
-    price: "",
+    price: "250",
     mileageRange: { min: 0, max: 100000 },
   },
 };
@@ -28,6 +28,9 @@ const carsSlice = createSlice({
     setMileageRangeFilter(state, action) {
       state.filter.mileageRange = action.payload;
     },
+    toggleFavorite(state, action) {
+      state.cars.favorites = [...state.cars.favorites, action.payload];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -37,8 +40,11 @@ const carsSlice = createSlice({
       .addCase(fetchCars.fulfilled, (state, action) => {
         state.cars.isLoading = false;
         state.cars.error = null;
-        // state.cars.items = action.payload;
-        state.cars.items = [...state.cars.items, ...action.payload];
+        const newItems = action.payload.map((item) => ({
+          ...item,
+          favorite: false,
+        }));
+        state.cars.items = [...state.cars.items, ...newItems];
       })
       .addCase(fetchCars.rejected, (state, action) => {
         state.cars.isLoading = false;
@@ -48,5 +54,9 @@ const carsSlice = createSlice({
 });
 
 export const carsReducer = carsSlice.reducer;
-export const { setBrandFilter, setPriceFilter, setMileageRangeFilter } =
-  carsSlice.actions;
+export const {
+  setBrandFilter,
+  setPriceFilter,
+  setMileageRangeFilter,
+  toggleFavorite,
+} = carsSlice.actions;

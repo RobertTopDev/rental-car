@@ -5,5 +5,6 @@ export const LoaderDivWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 24px;
+  width: 100%;
   min-height: 100vh;
 `;

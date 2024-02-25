@@ -15,4 +15,7 @@ export const CarsMenu = styled.ul`
   row-gap: 5rem;
   column-gap: 2.4rem;
   width: 100%;
+  height: 100%;
+
+  position: relative;
 `;

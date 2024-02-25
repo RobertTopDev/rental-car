@@ -2,12 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCars, selectFiltersCars } from "../../redux/cars/selectors";
 import { useEffect, useState } from "react";
 import { fetchAllCars, fetchCars } from "../../redux/cars/operations";
-import Loader from "../../components/Loader/Loader";
+// import Loader from "../../components/Loader/Loader";
 import CarItems from "../../components/CarItems/CarItems";
 import { CarsMenu, CatalogContainer } from "./Catalog.styled";
 import Filter from "../../components/Filter/Filter";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
+import Loading from "../../components/Loading/Loading";
+import { toggleFavorite } from "../../redux/cars/slice";
 // import {
 //   setBrandFilter,
 //   setPriceFilter,
@@ -20,27 +22,24 @@ function Catalog() {
 
   const [initialLoading, setInitialLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [filterBrand, setFilterBrand] = useState("");
-  const [filterPrice, setFilterPrice] = useState("");
-  const [filterMileageRange, setFilterMileageRange] = useState("");
+  // const [filterBrand, setFilterBrand] = useState("");
+  // const [filterPrice, setFilterPrice] = useState("");
+  // const [filterMileageRange, setFilterMileageRange] = useState("");
   const [showLoadBtn, setShowLoadBtn] = useState(true);
   const [displayedCars, setDisplayedCars] = useState([]);
 
   const filteredCars = useSelector(selectFiltersCars);
 
+  async function handleFavoriteToggle(carId) {
+    console.log(carId);
+    await dispatch(toggleFavorite(carId));
+  }
+
   function onLoadMoreClick() {
     setPage((page) => page + 1);
   }
 
-  function handleSearch(filters) {
-    setFilterBrand(filters.brand);
-    setFilterPrice(filters.price);
-
-    setFilterMileageRange({
-      min: filters.mileage.from,
-      max: filters.mileage.to,
-    });
-
+  function handlePage() {
     setPage(1);
   }
 
@@ -75,19 +74,29 @@ function Catalog() {
 
   return (
     <CatalogContainer>
-      <Filter handleSearch={handleSearch} />
+      <Filter handlePage={handlePage} />
       <CarsMenu>
-        {initialLoading ? (
-          <Loader />
-        ) : visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
+        {visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
           <li>No matching cars found</li>
         ) : visibleCars?.length > 0 ? (
           visibleCars?.map((items) => {
-            return <CarItems key={uuid()} items={items} />;
+            return (
+              <CarItems
+                key={uuid()}
+                items={items}
+                handleFavoriteToggle={handleFavoriteToggle}
+              />
+            );
           })
         ) : (
           cars?.map((items) => {
-            return <CarItems key={uuid()} items={items} />;
+            return (
+              <CarItems
+                key={uuid()}
+                items={items}
+                handleFavoriteToggle={handleFavoriteToggle}
+              />
+            );
           })
         )}
       </CarsMenu>
