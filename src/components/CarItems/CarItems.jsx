@@ -38,7 +38,16 @@ function CarItems({ items }) {
   return (
     <CarItem>
       <CarImgWrapper>
-        <CarImg src={items.img ? items.img : defaultCar} alt={items.make} />
+        <CarImg
+          src={
+            items.img
+              ? items.img
+              : items.photoLink
+              ? items.photoLink
+              : defaultCar
+          }
+          alt={items.make}
+        />
         <HeartIconWrapper
           onClick={() => setFavorite((prevState) => !prevState)}
         >

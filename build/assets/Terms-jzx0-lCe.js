@@ -1,1 +1,0 @@
-import{j as r}from"./index-jXYud5cz.js";import{P as s,a}from"./Privacy.styled-DkdCnbaf.js";import"./heroBg-xqvqUgNj.js";function t(){return r.jsx(s,{children:r.jsx(a,{children:r.jsx("span",{children:"Terms"})})})}export{t as default};
