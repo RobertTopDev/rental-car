@@ -1,1 +1,1 @@
-export const primaryFont = "Montserrat, sans-serif";
+export const primaryFont = "Manrope, sans-serif";

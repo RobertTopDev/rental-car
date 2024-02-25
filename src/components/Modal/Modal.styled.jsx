@@ -6,20 +6,22 @@ export const ModalDiv = styled(Modal)`
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: 24px;
-  margin-right: -50%;
+  margin: 0 auto;
   transform: translate(-50%, -50%);
   border-radius: 14px;
   padding: 4rem;
   width: 54rem;
-  height: 75.2rem;
+  height: 100%;
   background-color: ${(p) => p.theme.colors.mainBgColor};
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 `;
 
 export const ModalWrapper = styled.div``;
 
 export const ModalImg = styled.img`
-  width: 100%;
+  width: 46rem;
   height: auto;
   border-top-right-radius: 1.4rem;
   border-top-left-radius: 1.4rem;
@@ -87,6 +89,8 @@ export const ModalConditionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+
+  position: relative;
 `;
 
 export const ModalConditionWrapper = styled.div`
@@ -98,7 +102,46 @@ export const ModalConditionWrapper = styled.div`
 export const ModalCondition = styled.div`
   border-radius: 35px;
   padding: 7px 14px;
-  background-color: #f9f9f9;
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalConditionAddWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.8rem;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`;
+
+export const ModalConditionAdd = styled.span`
+  border-radius: 35px;
+  padding: 7px 14px;
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalConditionAccentColor = styled.span`
+  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const ModalBtn = styled.button`

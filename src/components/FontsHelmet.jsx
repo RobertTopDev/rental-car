@@ -5,8 +5,8 @@ export default function FontsHelmet() {
     <HelmetProvider>
       <Helmet>
         <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
         />
       </Helmet>
     </HelmetProvider>

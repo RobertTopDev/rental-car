@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { CardBtn } from "../CarItems/CarItems.styled";
 import { useState } from "react";
+import defaultCar from "../../../public/images/default-car.jpg";
 import {
   ModalImg,
   ModalTitle,
@@ -16,25 +18,10 @@ import {
   ModalCondition,
   ModalConditionWrapper,
   ModalConditionContainer,
+  ModalConditionAdd,
+  ModalConditionAccentColor,
 } from "./Modal.styled";
-// import Modal from "react-modal";
 
-// const customStyles = {
-//   content: {
-//     top: "50%",
-//     left: "50%",
-//     margin: "24px",
-//     marginRight: "-50%",
-//     transform: "translate(-50%, -50%)",
-//     borderRadius: "14px",
-//     padding: "4rem",
-//     width: "54rem",
-//     height: "75.2rem",
-//     backgroundColor: `${(p) => p.theme.colors.black}`,
-//   },
-// };
-
-// eslint-disable-next-line no-unused-vars
 function ModalPopUp({ items }) {
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -46,8 +33,6 @@ function ModalPopUp({ items }) {
     setIsOpen(false);
   }
 
-  console.log(items);
-
   return (
     <>
       <CardBtn type="button" onClick={openModal}>
@@ -56,11 +41,24 @@ function ModalPopUp({ items }) {
       <ModalDiv
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        // style={customStyles}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          },
+        }}
         contentLabel="Example Modal"
       >
         <ModalWrapper>
-          <ModalImg src={items.img} alt="" />
+          <ModalImg
+            src={
+              items.img
+                ? items.img
+                : items.photoLink
+                ? items.photoLink
+                : defaultCar
+            }
+            alt={items.make}
+          />
           <ModalTextContainer>
             <ModalTitleDescrContainer>
               <ModalTitleContainer>
@@ -111,10 +109,20 @@ function ModalPopUp({ items }) {
                         {condition.trim()}
                       </ModalCondition>
                     ))}
+                  <ModalConditionAdd>
+                    Mileage:{" "}
+                    <ModalConditionAccentColor>
+                      {items.mileage}
+                    </ModalConditionAccentColor>
+                  </ModalConditionAdd>
+                  <ModalConditionAdd>
+                    Price:{" "}
+                    <ModalConditionAccentColor>
+                      {items.rentalPrice}
+                    </ModalConditionAccentColor>
+                  </ModalConditionAdd>
                 </ModalConditionWrapper>
               </ModalConditionContainer>
-              <span>Mileage: {items.mileage}</span>
-              <span>Price: {items.price}</span>
             </div>
             <div>
               <ModalBtn>Rent A Car</ModalBtn>
