@@ -15,15 +15,63 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterMainWrapper = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+`;
+
+export const FooterContactAddressContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+`;
+
+export const FooterContactLinkText = styled.p`
+  color: ${(p) => p.theme.colors.mainTextColor};
+  font-family: ${primaryFont};
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  transition: 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+`;
+
+export const FooterContactIconLink = styled.a`
   display: flex;
   align-items: center;
+  gap: 1.2rem;
+
+  &:hover {
+    ${FooterContactLinkText} {
+      cursor: pointer;
+      border-bottom: 1px solid ${(p) => p.theme.colors.mainTextColor};
+    }
+  }
+`;
+
+export const FooterContactBtnsWrapper = styled.div`
+  display: flex;
   justify-content: space-between;
+`;
+
+export const FooterContactIcons = styled.div`
+  font-size: 1.8rem;
 `;
 
 export const FooterContactBtnWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 0.8rem;
+`;
+
+export const FooterSloganText = styled.p`
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.07143;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const FooterCallBtn = styled.a`

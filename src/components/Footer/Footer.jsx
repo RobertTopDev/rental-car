@@ -10,17 +10,73 @@ import {
   FooterEmailIcon,
   FooterInfoLink,
   FooterLinkWrapper,
+  FooterSloganText,
+  FooterContactAddressContainer,
+  FooterContactIconLink,
+  FooterContactLinkText,
+  FooterContactIcons,
+  FooterContactBtnsWrapper,
 } from "./Footer.styled";
+import Tooltip from "@mui/material/Tooltip";
 import Logo from "../Logo/Logo";
+import { FaPhone } from "react-icons/fa";
+import { GrMailOption } from "react-icons/gr";
+import { IoLocationOutline } from "react-icons/io5";
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterMainWrapper>
         <Logo />
+        <FooterSloganText>
+          Explore with Confidence: Cruise Wheels – Your Gateway to Stylish and
+          Comfortable Adventures.
+        </FooterSloganText>
+      </FooterMainWrapper>
+      <FooterContactBtnsWrapper>
+        <FooterContactAddressContainer>
+          <Tooltip title="Call Me" arrow placement="right">
+            <FooterContactIconLink
+              href="tel:+17734141884"
+              aria-label="Call +1 (773) 414-1884"
+              rel="noopener noreferrer"
+            >
+              <FooterContactIcons>
+                <FaPhone color="#28a745" />
+              </FooterContactIcons>
+              <FooterContactLinkText>+1 (773) 414-1884</FooterContactLinkText>
+            </FooterContactIconLink>
+          </Tooltip>
+          <Tooltip title="Email Me" arrow placement="right">
+            <FooterContactIconLink
+              href="mailto:alexsmagin1@gmail.com"
+              aria-label="Email address alexsmagin1@gmail.com"
+            >
+              <FooterContactIcons>
+                <GrMailOption color="#007bff" />
+              </FooterContactIcons>
+              <FooterContactLinkText>
+                alexsmagin1@gmail.com
+              </FooterContactLinkText>
+            </FooterContactIconLink>
+          </Tooltip>
+          <Tooltip title="My Location" arrow placement="right">
+            <FooterContactIconLink
+              href="https://www.google.com/maps?q=Chicago,IL,USA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Google Maps for the location in Chicago, IL, USA"
+            >
+              <FooterContactIcons>
+                <IoLocationOutline color="#dc3545" />
+              </FooterContactIcons>
+              <FooterContactLinkText>Chicago, IL, USA</FooterContactLinkText>
+            </FooterContactIconLink>
+          </Tooltip>
+        </FooterContactAddressContainer>
         <FooterContactBtnWrapper>
           <FooterCallBtn
-            href="tel:+380730000000"
+            href="tel:+17734141884"
             aria-label="Call our customer support"
             title="Call our customer support"
           >
@@ -38,7 +94,7 @@ function Footer() {
             <FooterEmailIcon />
           </FooterEmailBtn>
         </FooterContactBtnWrapper>
-      </FooterMainWrapper>
+      </FooterContactBtnsWrapper>
       <FooterInfoWrapper>
         <FooterInfoText>
           Alex Smagin &copy;Rental Car <span>{new Date().getFullYear()}</span>.
