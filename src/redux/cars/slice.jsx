@@ -7,9 +7,6 @@ const initialState = {
     favorites: [],
     isLoading: false,
     error: null,
-    total: 0,
-    currentPage: 1,
-    perPage: 12,
   },
   filter: {
     brand: "",
@@ -22,15 +19,6 @@ const carsSlice = createSlice({
   name: "cars",
   initialState,
   reducers: {
-    // setBrandFilter(state, action) {
-    //   state.filter.brand = action.payload;
-    // },
-    // setPriceFilter(state, action) {
-    //   state.filter.price = action.payload;
-    // },
-    // setMileageRangeFilter(state, action) {
-    //   state.filter.mileageRange = action.payload;
-    // },
     setBrandFilter(state, action) {
       state.filter.brand = action.payload;
     },
@@ -52,16 +40,6 @@ const carsSlice = createSlice({
         // state.cars.items = action.payload;
         state.cars.items = [...state.cars.items, ...action.payload];
       })
-      // .addCase(fetchCars.fulfilled, (state, action) => {
-      //   state.cars.isLoading = false;
-      //   state.cars.error = null;
-
-      //   const { total, items, page } = action.payload;
-
-      //   state.cars.total = total;
-      //   state.cars.items = [...state.cars.items, ...items];
-      //   state.cars.currentPage = page;
-      // })
       .addCase(fetchCars.rejected, (state, action) => {
         state.cars.isLoading = false;
         state.cars.error = action.payload;
