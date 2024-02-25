@@ -7,10 +7,29 @@ import {
   HeaderTextWrapper,
   NavBar,
 } from "./Header.styled";
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 function Header({ toggleTheme, isDarkTheme }) {
   const location = useLocation();
+
+  const [favoriteCars, setFavoriteCars] = useState(false);
+
+  useEffect(() => {
+    async function getFavoriteCars() {
+      try {
+        const favoritesFromStorage =
+          JSON.parse(localStorage.getItem("favorites")) || [];
+        if (favoritesFromStorage.length !== 0) {
+          setFavoriteCars(true);
+        }
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
+
+    getFavoriteCars();
+  }, []);
 
   return (
     <HeaderContainer>
@@ -29,6 +48,14 @@ function Header({ toggleTheme, isDarkTheme }) {
           >
             Catalog
           </HeaderLink>
+          {favoriteCars && (
+            <HeaderLink
+              $active={location.pathname === "/rental-car/favorites"}
+              to="favorites"
+            >
+              Favorites
+            </HeaderLink>
+          )}
         </NavBar>
         <ThemeSwitcher toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
       </HeaderTextWrapper>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
 import {
   CarImg,
@@ -25,7 +25,29 @@ function CarItems({ items, handleFavoriteToggle }) {
   const [favorite, setFavorite] = useState(false);
   // const dispatch = useDispatch();
 
-  function handleFavoriteBtn() {
+  useEffect(() => {
+    const favoritesFromStorage =
+      JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const isFavorite = favoritesFromStorage.includes(items.id);
+
+    setFavorite(isFavorite);
+  }, [items.id]);
+
+  function handleFavoriteBtn(id) {
+    const favoritesFromStorage =
+      JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const index = favoritesFromStorage.indexOf(id);
+
+    if (index !== -1) {
+      favoritesFromStorage.splice(index, 1);
+    } else {
+      favoritesFromStorage.push(id);
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favoritesFromStorage));
+
     setFavorite((prevState) => !prevState);
 
     handleFavoriteToggle(items.id);
@@ -44,7 +66,7 @@ function CarItems({ items, handleFavoriteToggle }) {
           }
           alt={items.make}
         />
-        <HeartIconWrapper onClick={handleFavoriteBtn}>
+        <HeartIconWrapper onClick={() => handleFavoriteBtn(items.id)}>
           {favorite ? <FavoriteHeartIcon /> : <EmptyHeartIcon />}
         </HeartIconWrapper>
       </CarImgWrapper>
