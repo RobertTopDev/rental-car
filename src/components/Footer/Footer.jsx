@@ -16,6 +16,7 @@ import {
   FooterContactLinkText,
   FooterContactIcons,
   FooterContactBtnsWrapper,
+  FooterSloganTextAccent,
 } from "./Footer.styled";
 import Tooltip from "@mui/material/Tooltip";
 import Logo from "../Logo/Logo";
@@ -29,8 +30,9 @@ function Footer() {
       <FooterMainWrapper>
         <Logo />
         <FooterSloganText>
-          Explore with Confidence: Cruise Wheels – Your Gateway to Stylish and
-          Comfortable Adventures.
+          Explore with Confidence:{" "}
+          <FooterSloganTextAccent>Cruise Wheels</FooterSloganTextAccent> – Your
+          Gateway to Stylish and Comfortable Adventures.
         </FooterSloganText>
       </FooterMainWrapper>
       <FooterContactBtnsWrapper>

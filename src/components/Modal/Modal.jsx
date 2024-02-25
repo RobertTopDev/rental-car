@@ -20,6 +20,7 @@ import {
   ModalConditionContainer,
   ModalConditionAdd,
   ModalConditionAccentColor,
+  CloseModal,
 } from "./Modal.styled";
 
 function ModalPopUp({ items }) {
@@ -49,6 +50,7 @@ function ModalPopUp({ items }) {
         contentLabel="Example Modal"
       >
         <ModalWrapper>
+          <CloseModal onClick={closeModal} />
           <ModalImg
             src={
               items.img

@@ -74,6 +74,11 @@ export const FooterSloganText = styled.p`
   color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
+export const FooterSloganTextAccent = styled.span`
+  font-weight: 500;
+  color: ${(p) => p.theme.colors.accentColor};
+`;
+
 export const FooterCallBtn = styled.a`
   background: none;
   outline: none;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
 import Modal from "react-modal";
+import { IoClose } from "react-icons/io5";
 
 export const ModalDiv = styled(Modal)`
   position: absolute;
@@ -157,6 +158,21 @@ export const ModalBtn = styled.button`
 
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
+    cursor: pointer;
+  }
+`;
+
+export const CloseModal = styled(IoClose)`
+  font-size: 2.4rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  position: absolute;
+  right: 1.2rem;
+
+  transition: all var(--primary-transition);
+
+  &:hover {
+    transform: rotate(90deg);
+    color: ${(p) => p.theme.colors.accentColor};
     cursor: pointer;
   }
 `;
