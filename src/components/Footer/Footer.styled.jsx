@@ -26,6 +26,12 @@ export const FooterMainWrapper = styled.div`
   }
 `;
 
+export const LogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+`;
+
 export const FooterContactAddressContainer = styled.div`
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ import { fetchAllCars, fetchCars } from "../../redux/cars/operations";
 // import Loader from "../../components/Loader/Loader";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
-import { CarsMenu, CatalogContainer } from "./Catalog.styled";
+import { CarsMenu, CatalogContainer, NoMatchCar } from "./Catalog.styled";
 import Filter from "../../components/Filter/Filter";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
@@ -91,7 +91,7 @@ function Catalog() {
         <Filter handlePage={handlePage} />
         <CarsMenu>
           {visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
-            <li>No matching cars found</li>
+            <NoMatchCar>No matching cars found</NoMatchCar>
           ) : visibleCars?.length > 0 ? (
             visibleCars?.map((items) => {
               return (

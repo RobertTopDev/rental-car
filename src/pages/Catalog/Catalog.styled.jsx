@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { primaryFont } from "../../components/fonts";
 
 export const CatalogContainer = styled.div`
   display: flex;
@@ -40,4 +41,12 @@ export const CarsMenu = styled.ul`
     row-gap: 5rem;
     column-gap: 2.4rem;
   }
+`;
+
+export const NoMatchCar = styled.li`
+  font-family: ${primaryFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;

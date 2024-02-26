@@ -17,18 +17,23 @@ import {
   FooterContactIcons,
   FooterContactBtnsWrapper,
   FooterSloganTextAccent,
+  LogoWrapper,
 } from "./Footer.styled";
 import Tooltip from "@mui/material/Tooltip";
 import Logo from "../Logo/Logo";
 import { FaPhone } from "react-icons/fa";
 import { GrMailOption } from "react-icons/gr";
 import { IoLocationOutline } from "react-icons/io5";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterMainWrapper>
-        <Logo />
+        <LogoWrapper>
+          <Logo />
+          <SocialIcons />
+        </LogoWrapper>
         <FooterSloganText>
           Explore with Confidence:{" "}
           <FooterSloganTextAccent>Cruise Wheels</FooterSloganTextAccent> – Your
