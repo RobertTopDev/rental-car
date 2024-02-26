@@ -1,4 +1,4 @@
-import{u as i,p as t}from"./index-fbTBOemn.js";import{h as o}from"./heroBg-xqvqUgNj.js";const a=i.div`
+import{u as i,p as t}from"./index-BSlj1cPm.js";import{h as o}from"./heroBg-xqvqUgNj.js";const a=i.div`
   min-height: 100vh;
   margin: 0 auto;
 `,l=i.div`
