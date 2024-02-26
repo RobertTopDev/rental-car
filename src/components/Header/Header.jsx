@@ -8,6 +8,7 @@ import {
   NavBar,
 } from "./Header.styled";
 import { useEffect, useState } from "react";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 // eslint-disable-next-line react/prop-types
 function Header({ toggleTheme, isDarkTheme }) {
@@ -59,6 +60,7 @@ function Header({ toggleTheme, isDarkTheme }) {
         </NavBar>
         <ThemeSwitcher toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
       </HeaderTextWrapper>
+      <MenuBurger toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
     </HeaderContainer>
   );
 }

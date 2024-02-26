@@ -37,6 +37,7 @@ const theme = {
       switcherHoverBg: "rgb(36, 36, 36,0.1)",
       emptyHeart: "rgba(255, 255, 255, 0.8)",
       boxFocus: "rgba(100, 100, 111, 0.2)",
+      burgerOverlay: "rgb(250, 250, 250,0.9)",
     },
   },
   dark: {
@@ -63,6 +64,7 @@ const theme = {
       switcherHoverBg: "rgb(254, 250, 224, 0.1)",
       emptyHeart: "rgba(255, 255, 255, 0.8)",
       boxFocus: "rgba(237, 237, 245, 0.2)",
+      burgerOverlay: "rgb(36, 36, 36,0.9)",
     },
   },
 };

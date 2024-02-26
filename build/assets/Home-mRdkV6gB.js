@@ -1,4 +1,4 @@
-import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h as s}from"./heroBg-xqvqUgNj.js";const d=r.div`
+import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DFTZXsNr.js";import{h as s}from"./heroBg-xqvqUgNj.js";const d=r.div`
   min-height: calc(100vh - 6rem);
   height: 100%;
   margin: 0 auto;
@@ -15,6 +15,8 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   overflow: hidden;
 
   display: flex;
+  justify-content: center;
+  align-items: end;
 
   &::before {
     content: "";
@@ -33,12 +35,12 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   }
 
   @media (min-width: 620px) {
-    justify-content: end;
   }
 
   @media (min-width: 768px) {
     padding: 3.2rem;
     overflow: visible;
+    justify-content: end;
   }
 
   @media (min-width: 1440px) {
@@ -47,7 +49,7 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
     align-items: end;
     justify-content: end;
   }
-`,m=r.div`
+`,c=r.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -66,8 +68,8 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   @media (min-width: 1440px) {
     width: 82.6rem;
   }
-`,c=r.h1`
-  font-family: ${o};
+`,m=r.h1`
+  font-family: ${t};
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -97,7 +99,7 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   }
 `,p=r.p`
   color: ${i=>i.theme.colors.lightWhiteColor};
-  font-family: ${o};
+  font-family: ${t};
   font-weight: 400;
   font-size: 16px;
   line-height: 1.33333;
@@ -106,7 +108,7 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   @media (min-width: 768px) {
     font-size: 18px;
   }
-`,x=r(t)`
+`,u=r(o)`
   background: none;
   outline: none;
   border: none;
@@ -119,4 +121,4 @@ import{u as r,p as o,L as t,j as e,H as n,a}from"./index-HQGBBN8J.js";import{h a
   &:hover {
     background-color: ${i=>i.theme.colors.accentColorHover};
   }
-`;function f(){return e.jsxs(e.Fragment,{children:[e.jsx(n,{children:e.jsxs(a,{children:[e.jsx("title",{children:"Cruise Wheels - Home Page"}),e.jsx("meta",{name:"description",content:"Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."}),e.jsx("meta",{name:"keywords",content:"car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),e.jsx(d,{children:e.jsx(l,{children:e.jsxs(m,{children:[e.jsxs(c,{children:["Drive Your Dreams: Explore the World with"," ",e.jsx(h,{children:"Cruise Wheels"})," Rental Cars"]}),e.jsx(p,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),e.jsx("div",{style:{textAlign:"end"},children:e.jsx(x,{to:"catalog",children:"View or Catalog"})})]})})})]})}export{f as default};
+`;function f(){return e.jsxs(e.Fragment,{children:[e.jsx(n,{children:e.jsxs(a,{children:[e.jsx("title",{children:"Cruise Wheels - Home Page"}),e.jsx("meta",{name:"description",content:"Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."}),e.jsx("meta",{name:"keywords",content:"car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),e.jsx(d,{children:e.jsx(l,{children:e.jsxs(c,{children:[e.jsxs(m,{children:["Drive Your Dreams: Explore the World with"," ",e.jsx(h,{children:"Cruise Wheels"})," Rental Cars"]}),e.jsx(p,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),e.jsx("div",{style:{textAlign:"end"},children:e.jsx(u,{to:"catalog",children:"View our Catalog"})})]})})})]})}export{f as default};
