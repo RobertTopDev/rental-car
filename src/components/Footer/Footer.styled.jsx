@@ -19,9 +19,9 @@ export const FooterMainWrapper = styled.div`
   flex-direction: column;
   gap: 2.4rem;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1020px) {
     display: grid;
-    align-items: center;
+    align-items: start;
     grid-template-columns: 1fr 2fr;
   }
 `;
@@ -61,6 +61,15 @@ export const FooterContactBtnsWrapper = styled.div`
   flex-direction: column;
   gap: 2.4rem;
 
+  @media (min-width: 402px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 540px) {
+    align-items: start;
+  }
+
   @media (min-width: 1440px) {
     flex-direction: row;
     justify-content: space-between;
@@ -73,8 +82,13 @@ export const FooterContactIcons = styled.div`
 
 export const FooterContactBtnWrapper = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.8rem;
+
+  @media (min-width: 540px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const FooterSloganText = styled.p`
@@ -98,7 +112,7 @@ export const FooterCallBtn = styled.a`
   border-radius: 1.4rem;
   padding: 1.2rem 2.4rem;
   background-color: ${(p) => p.theme.colors.green};
-  width: 16rem;
+  max-width: 32rem;
 
   display: flex;
   align-items: center;
@@ -125,7 +139,7 @@ export const FooterEmailBtn = styled.a`
   border-radius: 1.4rem;
   padding: 1.2rem 2.4rem;
   background-color: ${(p) => p.theme.colors.mail};
-  width: 16rem;
+  max-width: 32rem;
 
   display: flex;
   align-items: center;
@@ -162,7 +176,7 @@ export const FooterInfoWrapper = styled.div`
   flex-direction: column;
   gap: 1.2rem;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 540px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -176,6 +190,12 @@ export const FooterInfoText = styled.p`
   font-size: 14px;
   line-height: 1.28571;
   letter-spacing: -0.02em;
+
+  order: 2;
+
+  @media (min-width: 540px) {
+    order: 1;
+  }
 `;
 
 export const FooterLinkWrapper = styled.div`
@@ -188,6 +208,12 @@ export const FooterLinkWrapper = styled.div`
   font-size: 14px;
   line-height: 1.28571;
   letter-spacing: -0.02em;
+
+  order: 1;
+
+  @media (min-width: 540px) {
+    order: 2;
+  }
 `;
 
 export const FooterInfoLink = styled(Link)`
