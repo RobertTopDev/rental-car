@@ -16,7 +16,9 @@
     "api",
     "frontend",
     "redux",
-    "styled component"
+    "styled component",
+    "axios",
+    "mockapi"
   ],
   "repository": {
     "type": "git",
