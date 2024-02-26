@@ -1,11 +1,22 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
-import CreatableSelect from "react-select/creatable";
 
 export const FormWrapper = styled.form`
   display: flex;
-  align-items: end;
+  flex-direction: column;
   gap: 1.8rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: end;
+    gap: 1.4rem;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: end;
+    gap: 1.8rem;
+  }
 `;
 
 export const OptionWrapper = styled.div`
@@ -41,7 +52,7 @@ export const SelectInput = styled.div`
   background-color: ${(p) => p.theme.colors.inputBgColor};
   padding: 1.4rem 1.8rem;
   height: 4.8rem;
-  width: 22.4rem;
+  width: 100%;
 
   appearance: none;
 
@@ -59,6 +70,10 @@ export const SelectInput = styled.div`
   &:focus {
     outline: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 22.4rem;
   }
 `;
 
@@ -107,11 +122,16 @@ export const FormLabel = styled.label`
   color: ${(p) => p.theme.colors.mainTextColorLowOp};
 `;
 
+export const FormInputMileageWrapper = styled.div`
+  display: flex;
+  max-width: 32rem;
+`;
+
 export const FormInputRight = styled.input`
   border: none;
   outline: none;
   background: none;
-  width: 16rem;
+  width: 100%;
   height: 4.8rem;
   border-radius: 0 14px 14px 0;
   background-color: ${(p) => p.theme.colors.inputBgColor};
@@ -141,6 +161,10 @@ export const FormInputRight = styled.input`
     outline: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+
+  @media (min-width: 1440px) {
+    width: 16rem;
+  }
 `;
 export const FormInputLeft = styled.input`
   border: none;
@@ -148,7 +172,7 @@ export const FormInputLeft = styled.input`
   background: none;
   border-right: 1px solid rgba(138, 138, 137, 0.2);
   border-radius: 14px 0 0 14px;
-  width: 16rem;
+  width: 100%;
   height: 4.8rem;
   background-color: ${(p) => p.theme.colors.inputBgColor};
   padding: 1.4rem 2.4rem;
@@ -176,6 +200,10 @@ export const FormInputLeft = styled.input`
   &:focus {
     outline: none;
     box-shadow: ${(p) => p.theme.colors.boxFocus} 0px 7px 29px 0px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 16rem;
   }
 `;
 

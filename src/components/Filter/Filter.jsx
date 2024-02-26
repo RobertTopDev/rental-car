@@ -11,6 +11,7 @@ import {
   SelectInput,
   SelectedOption,
   SelectedOptionText,
+  FormInputMileageWrapper,
   // SelectOptions,
 } from "./Filter.styled";
 import { useState } from "react";
@@ -123,7 +124,7 @@ function Filter({ handlePage }) {
       </OptionWrapper>
       <OptionWrapper>
         <FormLabel htmlFor="mileage">Car mileage / km</FormLabel>
-        <div>
+        <FormInputMileageWrapper>
           <FormInputLeft
             type="text"
             placeholder="From"
@@ -136,7 +137,7 @@ function Filter({ handlePage }) {
             value={mileageTo}
             onChange={(e) => setMileageTo(e.target.value)}
           />
-        </div>
+        </FormInputMileageWrapper>
       </OptionWrapper>
       <FormBtn type="submit">Search</FormBtn>
     </FormWrapper>

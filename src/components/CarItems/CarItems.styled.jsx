@@ -9,6 +9,10 @@ export const CarItem = styled.li`
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  max-width: 36.5rem;
+
+  @media (min-width: 1440px) {
+  }
 `;
 
 export const CarImgWrapper = styled.div`
