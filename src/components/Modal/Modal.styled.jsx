@@ -10,19 +10,30 @@ export const ModalDiv = styled(Modal)`
   margin: 0 auto;
   transform: translate(-50%, -50%);
   border-radius: 14px;
-  padding: 4rem;
-  width: 54rem;
-  height: 100%;
+  padding: 1.4rem;
+  max-width: 54rem;
+  width: 95%;
   background-color: ${(p) => p.theme.colors.mainBgColor};
 
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  @media (min-width: 365px) {
+    padding: 2.4rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 4rem;
+  }
 `;
 
-export const ModalWrapper = styled.div``;
+export const ModalWrapper = styled.div`
+  margin: 0 auto;
+`;
 
 export const ModalImg = styled.img`
-  width: 46rem;
+  /* max-width: 46rem; */
+  width: 100%;
   height: auto;
   border-top-right-radius: 1.4rem;
   border-top-left-radius: 1.4rem;
@@ -166,7 +177,8 @@ export const CloseModal = styled(IoClose)`
   font-size: 2.4rem;
   color: ${(p) => p.theme.colors.mainTextColor};
   position: absolute;
-  right: 1.2rem;
+  right: 2.4rem;
+  top: 2.4rem;
 
   transition: all var(--primary-transition);
 
@@ -174,5 +186,14 @@ export const CloseModal = styled(IoClose)`
     transform: rotate(90deg);
     color: ${(p) => p.theme.colors.accentColor};
     cursor: pointer;
+  }
+
+  @media (min-width: 365px) {
+    right: 0rem;
+  }
+
+  @media (min-width: 768px) {
+    right: 1rem;
+    top: 4rem;
   }
 `;

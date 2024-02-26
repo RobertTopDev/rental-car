@@ -4,7 +4,7 @@ import { primaryFont } from "../../components/fonts";
 import { Link } from "react-router-dom";
 
 export const HomeContainer = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
   height: 100%;
   margin: 0 auto;
 `;
@@ -12,7 +12,7 @@ export const HomeContainer = styled.div`
 export const HeroWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
   background: url(${heroImg});
   background-size: cover;
   background-repeat: no-repeat;
