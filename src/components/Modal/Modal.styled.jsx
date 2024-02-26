@@ -156,14 +156,13 @@ export const ModalConditionAccentColor = styled.span`
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const ModalBtn = styled.button`
-  border: none;
-  outline: none;
-  background: none;
+export const ModalBtn = styled.a`
+  display: inline-block;
   background-color: ${(p) => p.theme.colors.accentColor};
   color: ${(p) => p.theme.colors.white};
-  padding: 2rem 5rem;
+  padding: 1.2rem 5rem;
   border-radius: 1.4rem;
+  min-width: 168px;
 
   transition: all var(--primary-transition);
 

@@ -12,6 +12,8 @@ import {
   SelectedOption,
   SelectedOptionText,
   FormInputMileageWrapper,
+  ArrowIconDown,
+  ArrowIconUp,
   // SelectOptions,
 } from "./Filter.styled";
 import { useState } from "react";
@@ -99,6 +101,7 @@ function Filter({ handlePage }) {
         <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
         <SelectInput onClick={() => setIsOpen(!isOpen)}>
           {selectedBrand || "Enter the text"}
+          {isOpen ? <ArrowIconUp /> : <ArrowIconDown />}
         </SelectInput>
         {isOpen && (
           <SelectedOption>
@@ -117,6 +120,7 @@ function Filter({ handlePage }) {
         <FormLabel htmlFor="price">Price / 1 hour</FormLabel>
         <SelectInput onClick={() => setIsOpenPrice(!isOpenPrice)}>
           {selectedPrice || "To $"}
+          {isOpenPrice ? <ArrowIconUp /> : <ArrowIconDown />}
         </SelectInput>
         {isOpenPrice && (
           <SelectedOption>{generatePriceOptions()}</SelectedOption>

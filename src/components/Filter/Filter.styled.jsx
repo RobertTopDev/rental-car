@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -54,8 +55,6 @@ export const SelectInput = styled.div`
   height: 4.8rem;
   width: 100%;
 
-  appearance: none;
-
   font-family: ${primaryFont};
   font-weight: 500;
   font-size: 1.6rem;
@@ -89,6 +88,21 @@ export const SelectedOption = styled.div`
   border: 1px solid rgba(18, 20, 23, 0.05);
   border-radius: 1.4rem;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(p) => p.theme.colors.mainTextColorVeryLowOp};
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: transparent;
+  }
 
   padding: 1.4rem 1.8rem;
   background-color: ${(p) => p.theme.colors.headerBgColor};
@@ -212,4 +226,42 @@ export const ErrorMessage = styled.p`
   position: absolute;
   bottom: 0;
   left: 0;
+`;
+
+export const ArrowIconDown = styled(IoIosArrowDown)`
+  font-size: 1.8rem;
+  color: ${(p) => p.theme.colors.black};
+
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+
+  transform: translateY(-50%);
+
+  @media (min-width: 768px) {
+    right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    right: 1.2rem;
+  }
+`;
+
+export const ArrowIconUp = styled(IoIosArrowUp)`
+  font-size: 1.8rem;
+  color: ${(p) => p.theme.colors.black};
+
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+
+  transform: translateY(-50%);
+
+  @media (min-width: 768px) {
+    right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    right: 1.2rem;
+  }
 `;

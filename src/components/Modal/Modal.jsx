@@ -127,7 +127,13 @@ function ModalPopUp({ items }) {
               </ModalConditionContainer>
             </div>
             <div>
-              <ModalBtn>Rent A Car</ModalBtn>
+              <ModalBtn
+                href="tel:+17734141884"
+                aria-label="Call us to rent a car"
+                title="Call us to rent a car"
+              >
+                RENT A CAR
+              </ModalBtn>
             </div>
           </ModalTextContainer>
         </ModalWrapper>

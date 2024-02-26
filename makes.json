@@ -1,9 +1,14 @@
 [
   "Buick",
   "Volvo",
+  "Honda",
+  "Toyota",
+  "Ford",
+  "Jeep",
   "HUMMER",
   "Subaru",
   "Mitsubishi",
+  "Tesla",
   "Nissan",
   "Lincoln",
   "GMC",
@@ -17,8 +22,10 @@
   "Audi",
   "BMW",
   "Chevrolet",
-  "Mercedes-Benz",
   "Chrysler",
   "Kia",
-  "Land"
+  "Land Rover",
+  "Porsche",
+  "Lexus",
+  "Jaguar"
 ]
