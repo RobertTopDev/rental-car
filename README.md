@@ -25,11 +25,17 @@ Welcome to Cruise Wheels, a React Redux project built on Vite that allows you to
 
 ### Screenshots:
 
-![Task Pro App](/public/images/screenshots/cruise1.jpg) _Caption for Screenshot 1
+![Cruise Wheels](/public/images/screenshots/cruise1.jpg) _Caption for Screenshot 1
 (Home Page Dark Theme)_
 
-![Task Pro App](/public/images/screenshots/cruise2.jpg) _Caption for Screenshot 2
+![Cruise Wheels](/public/images/screenshots/cruise2.jpg) _Caption for Screenshot 2
 (Catalog Page Dark Theme)_
+
+![Cruise Wheels](/public/images/screenshots/cruise3.jpg) _Caption for Screenshot 2
+(Modal Window Mobile Screen Light Theme)_
+
+![Cruise Wheels](/public/images/screenshots/cruise4.jpg) _Caption for Screenshot 2
+(Modal Window Tablet Screen Dark Theme)_
 
 ## Features
 
