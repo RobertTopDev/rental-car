@@ -22,6 +22,8 @@ export const HeroWrapper = styled.div`
   overflow: hidden;
 
   display: flex;
+  justify-content: center;
+  align-items: end;
 
   &::before {
     content: "";
@@ -40,12 +42,12 @@ export const HeroWrapper = styled.div`
   }
 
   @media (min-width: 620px) {
-    justify-content: end;
   }
 
   @media (min-width: 768px) {
     padding: 3.2rem;
     overflow: visible;
+    justify-content: end;
   }
 
   @media (min-width: 1440px) {

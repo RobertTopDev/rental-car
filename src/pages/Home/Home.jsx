@@ -40,7 +40,7 @@ function Home() {
               adventure begins with CruiseWheels – Your Drive, Your Experience.
             </HeroText>
             <div style={{ textAlign: "end" }}>
-              <CatalogBtn to="catalog">View or Catalog</CatalogBtn>
+              <CatalogBtn to="catalog">View our Catalog</CatalogBtn>
             </div>
           </HeroTextWrapper>
         </HeroWrapper>

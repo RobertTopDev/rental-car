@@ -108,9 +108,9 @@ function Footer() {
           All rights reserved.
         </FooterInfoText>
         <FooterLinkWrapper>
-          <FooterInfoLink to="privacy">Privacy</FooterInfoLink>
+          <FooterInfoLink to="privacy">Privacy Policy</FooterInfoLink>
           <span>/</span>
-          <FooterInfoLink to="terms">Terms</FooterInfoLink>
+          <FooterInfoLink to="terms">Terms of Service</FooterInfoLink>
         </FooterLinkWrapper>
       </FooterInfoWrapper>
     </FooterContainer>
