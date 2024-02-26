@@ -3,7 +3,15 @@ import { useEffect, useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
 import { v4 as uuid } from "uuid";
 import CarItems from "../../components/CarItems/CarItems";
-import { FavoritesContainer, FavoritesMenu } from "./Favorites.styled";
+import {
+  FavoritesContainer,
+  FavoritesEmptyContainer,
+  FavoritesEmptyText,
+  FavoritesEmptyTextWrapper,
+  FavoritesEmptyTitle,
+  FavoritesEmptyWrapper,
+  FavoritesMenu,
+} from "./Favorites.styled";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +35,7 @@ function Favorites() {
         if (favoriteCarsList.length === 0) {
           localStorage.removeItem("favorites");
 
-          navigate("/rental-car/");
+          // navigate("/rental-car/");
         }
 
         setFavoriteCars(favoriteCarsList);
@@ -38,6 +46,8 @@ function Favorites() {
 
     getFavoriteCars();
   }, [dispatch, navigate]);
+
+  console.log(favoriteCars.length);
   return (
     <>
       <HelmetProvider>
@@ -53,13 +63,28 @@ function Favorites() {
           />
         </Helmet>
       </HelmetProvider>
-      <FavoritesContainer>
-        <FavoritesMenu>
-          {favoriteCars?.map((items) => {
-            return <CarItems key={uuid()} items={items} />;
-          })}
-        </FavoritesMenu>
-      </FavoritesContainer>
+      {favoriteCars.length === 0 ? (
+        <FavoritesEmptyContainer>
+          <FavoritesEmptyWrapper>
+            <FavoritesEmptyTextWrapper>
+              <FavoritesEmptyTitle>No Favorite Cars Found!</FavoritesEmptyTitle>
+              <FavoritesEmptyText>
+                It looks like you haven't added any cars to your favorites yet.
+                Explore Cruise Wheels' main page to find stylish and comfy rides
+                for your next journey!
+              </FavoritesEmptyText>
+            </FavoritesEmptyTextWrapper>
+          </FavoritesEmptyWrapper>
+        </FavoritesEmptyContainer>
+      ) : (
+        <FavoritesContainer>
+          <FavoritesMenu>
+            {favoriteCars?.map((items) => {
+              return <CarItems key={uuid()} items={items} />;
+            })}
+          </FavoritesMenu>
+        </FavoritesContainer>
+      )}
     </>
   );
 }
