@@ -31,8 +31,7 @@ function Catalog() {
   const filteredCars = useSelector(selectFiltersCars);
 
   async function handleFavoriteToggle(carId) {
-    console.log(carId);
-    await dispatch(toggleFavorite(carId));
+    // await dispatch(toggleFavorite(carId));
   }
 
   function onLoadMoreClick() {

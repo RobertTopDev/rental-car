@@ -5,10 +5,12 @@ import { v4 as uuid } from "uuid";
 import CarItems from "../../components/CarItems/CarItems";
 import { FavoritesContainer, FavoritesMenu } from "./Favorites.styled";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 function Favorites() {
   const [favoriteCars, setFavoriteCars] = useState([]);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getFavoriteCars() {
@@ -22,6 +24,12 @@ function Favorites() {
           favoritesFromStorage.includes(car.id)
         );
 
+        if (favoriteCarsList.length === 0) {
+          localStorage.removeItem("favorites");
+
+          navigate("/rental-car/");
+        }
+
         setFavoriteCars(favoriteCarsList);
       } catch (err) {
         console.log(err.message);
@@ -29,8 +37,7 @@ function Favorites() {
     }
 
     getFavoriteCars();
-  }, [dispatch]);
-
+  }, [dispatch, navigate]);
   return (
     <>
       <HelmetProvider>

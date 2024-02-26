@@ -50,7 +50,7 @@ function CarItems({ items, handleFavoriteToggle }) {
 
     setFavorite((prevState) => !prevState);
 
-    handleFavoriteToggle(items.id);
+    // handleFavoriteToggle(items?.id);
   }
 
   return (
