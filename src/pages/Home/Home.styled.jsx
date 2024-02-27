@@ -42,6 +42,7 @@ export const HeroWrapper = styled.div`
   }
 
   @media (min-width: 620px) {
+    align-items: end;
   }
 
   @media (min-width: 768px) {
@@ -63,6 +64,7 @@ export const HeroTextWrapper = styled.div`
   flex-direction: column;
   gap: 3.2rem;
   padding: 2.4rem;
+  margin-bottom: 4.8rem;
   width: 60rem;
   height: 100%;
 
@@ -70,8 +72,9 @@ export const HeroTextWrapper = styled.div`
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
-  @media (min-width: 1440px) {
-    width: 82.6rem;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    /* width: 82.6rem; */
   }
 
   @media (min-width: 1440px) {

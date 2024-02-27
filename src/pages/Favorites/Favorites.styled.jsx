@@ -45,15 +45,15 @@ export const FavoritesMenu = styled.ul`
 `;
 
 export const FavoritesEmptyContainer = styled.div`
-  min-height: 100vh;
-  height: 100vh;
+  min-height: calc(100vh - 6rem);
+  height: 100%;
   margin: 0 auto;
 `;
 
 export const FavoritesEmptyWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100vh - 6rem);
   background: url(${heroImg});
   background-size: cover;
   background-repeat: no-repeat;
@@ -82,15 +82,8 @@ export const FavoritesEmptyWrapper = styled.div`
   }
 
   @media (min-width: 768px) {
-    background-size: 100%;
-    min-height: auto;
     padding: 3.2rem;
     overflow: visible;
-  }
-
-  @media (min-width: 1440px) {
-    min-height: 60rem;
-    padding: 3.2rem;
   }
 `;
 
@@ -100,12 +93,14 @@ export const FavoritesEmptyTextWrapper = styled.div`
   align-items: center;
   gap: 3.2rem;
   padding: 2.4rem;
-  width: 60%;
+  width: 60rem;
   background-color: ${(p) => p.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
   height: 100%;
+
+  margin-top: 4.8rem;
 `;
 
 export const FavoritesEmptyTitle = styled.h2`

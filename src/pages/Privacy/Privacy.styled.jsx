@@ -39,15 +39,8 @@ export const PrivacyWrapper = styled.div`
   }
 
   @media (min-width: 768px) {
-    background-size: 100%;
-    min-height: auto;
     padding: 3.2rem;
     overflow: visible;
-  }
-
-  @media (min-width: 1440px) {
-    min-height: 60rem;
-    padding: 3.2rem;
   }
 `;
 
@@ -57,7 +50,7 @@ export const PrivacyTextWrapper = styled.div`
   align-items: center;
   gap: 3.2rem;
   padding: 2.4rem;
-  width: 60%;
+  width: 60rem;
   background-color: ${(p) => p.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
