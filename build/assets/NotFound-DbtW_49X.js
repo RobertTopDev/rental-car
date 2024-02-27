@@ -1,4 +1,4 @@
-import{u as o,p as r,r as i,j as e,H as n,a as s}from"./index-DDd1WRLG.js";import{h as a}from"./heroBg-xqvqUgNj.js";const d=o.div`
+import{u as o,p as r,r as i,j as e,H as n,a as s}from"./index-BPi7vO9s.js";import{h as a}from"./heroBg-xqvqUgNj.js";const d=o.div`
   min-height: 100vh;
   height: 100vh;
   margin: 0 auto;
@@ -34,15 +34,8 @@ import{u as o,p as r,r as i,j as e,H as n,a as s}from"./index-DDd1WRLG.js";impor
   }
 
   @media (min-width: 768px) {
-    background-size: 100%;
-    min-height: auto;
     padding: 3.2rem;
     overflow: visible;
-  }
-
-  @media (min-width: 1440px) {
-    min-height: 60rem;
-    padding: 3.2rem;
   }
 `,h=o.div`
   display: flex;
@@ -50,12 +43,14 @@ import{u as o,p as r,r as i,j as e,H as n,a as s}from"./index-DDd1WRLG.js";impor
   align-items: center;
   gap: 3.2rem;
   padding: 2.4rem;
-  width: 60%;
+  width: 60rem;
   background-color: ${t=>t.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
   height: 100%;
+
+  margin-top: 4.8rem;
 `,u=o.h2`
   color: ${t=>t.theme.colors.lightWhiteColor};
   font-family: ${r};

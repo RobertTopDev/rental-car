@@ -2,19 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCars, selectFiltersCars } from "../../redux/cars/selectors";
 import { useEffect, useState } from "react";
 import { fetchAllCars, fetchCars } from "../../redux/cars/operations";
-// import Loader from "../../components/Loader/Loader";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
 import { CarsMenu, CatalogContainer, NoMatchCar } from "./Catalog.styled";
 import Filter from "../../components/Filter/Filter";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
-import { toggleFavorite } from "../../redux/cars/slice";
-// import {
-//   setBrandFilter,
-//   setPriceFilter,
-//   setMileageRangeFilter,
-// } from "../../redux/cars/slice";
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -22,9 +15,6 @@ function Catalog() {
 
   const [initialLoading, setInitialLoading] = useState(true);
   const [page, setPage] = useState(1);
-  // const [filterBrand, setFilterBrand] = useState("");
-  // const [filterPrice, setFilterPrice] = useState("");
-  // const [filterMileageRange, setFilterMileageRange] = useState("");
   const [showLoadBtn, setShowLoadBtn] = useState(true);
   const [displayedCars, setDisplayedCars] = useState([]);
 
@@ -42,11 +32,19 @@ function Catalog() {
     setPage(1);
   }
 
+  const carsPerPage = 12;
+
+  const totalCarsOnServer = 52;
+
+  const totalCars = Math.ceil(totalCarsOnServer / carsPerPage);
+
   useEffect(() => {
     async function fetchedData() {
       try {
         const allCarsResponse = await dispatch(fetchAllCars());
         setDisplayedCars(allCarsResponse.payload);
+
+        setShowLoadBtn(page < totalCars);
 
         await dispatch(fetchCars(page)).unwrap();
       } catch (error) {
@@ -56,7 +54,7 @@ function Catalog() {
       }
     }
     fetchedData();
-  }, [dispatch, page]);
+  }, [dispatch, page, totalCars]);
 
   function filteredByCars() {
     const filtered = displayedCars.filter(
@@ -93,27 +91,17 @@ function Catalog() {
             <NoMatchCar>No matching cars found</NoMatchCar>
           ) : visibleCars?.length > 0 ? (
             visibleCars?.map((items) => {
-              return (
-                <CarItems
-                  key={uuid()}
-                  items={items}
-                  handleFavoriteToggle={handleFavoriteToggle}
-                />
-              );
+              return <CarItems key={uuid()} items={items} />;
             })
           ) : (
             cars?.map((items) => {
-              return (
-                <CarItems
-                  key={uuid()}
-                  items={items}
-                  handleFavoriteToggle={handleFavoriteToggle}
-                />
-              );
+              return <CarItems key={uuid()} items={items} />;
             })
           )}
         </CarsMenu>
-        {showLoadBtn && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
+        {showLoadBtn && visibleCars?.length > 12 && (
+          <LoadMore onLoadMoreClick={onLoadMoreClick} />
+        )}
       </CatalogContainer>
     </>
   );

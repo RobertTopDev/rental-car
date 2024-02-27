@@ -1,4 +1,4 @@
-import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DDd1WRLG.js";import{h as s}from"./heroBg-xqvqUgNj.js";const d=r.div`
+import{u as r,p as t,L as o,j as e,H as n,a}from"./index-BPi7vO9s.js";import{h as s}from"./heroBg-xqvqUgNj.js";const d=r.div`
   min-height: calc(100vh - 6rem);
   height: 100%;
   margin: 0 auto;
@@ -35,6 +35,7 @@ import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DDd1WRLG.js";import{h a
   }
 
   @media (min-width: 620px) {
+    align-items: end;
   }
 
   @media (min-width: 768px) {
@@ -49,11 +50,12 @@ import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DDd1WRLG.js";import{h a
     align-items: end;
     justify-content: end;
   }
-`,c=r.div`
+`,m=r.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
   padding: 2.4rem;
+  margin-bottom: 4.8rem;
   width: 60rem;
   height: 100%;
 
@@ -61,14 +63,15 @@ import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DDd1WRLG.js";import{h a
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
-  @media (min-width: 1440px) {
-    width: 82.6rem;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    /* width: 82.6rem; */
   }
 
   @media (min-width: 1440px) {
     width: 82.6rem;
   }
-`,m=r.h1`
+`,c=r.h1`
   font-family: ${t};
   font-weight: 400;
   font-size: 18px;
@@ -121,4 +124,4 @@ import{u as r,p as t,L as o,j as e,H as n,a}from"./index-DDd1WRLG.js";import{h a
   &:hover {
     background-color: ${i=>i.theme.colors.accentColorHover};
   }
-`;function f(){return e.jsxs(e.Fragment,{children:[e.jsx(n,{children:e.jsxs(a,{children:[e.jsx("title",{children:"Cruise Wheels - Home Page"}),e.jsx("meta",{name:"description",content:"Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."}),e.jsx("meta",{name:"keywords",content:"car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),e.jsx(d,{children:e.jsx(l,{children:e.jsxs(c,{children:[e.jsxs(m,{children:["Drive Your Dreams: Explore the World with"," ",e.jsx(h,{children:"Cruise Wheels"})," Rental Cars"]}),e.jsx(p,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),e.jsx("div",{style:{textAlign:"end"},children:e.jsx(u,{to:"catalog",children:"View our Catalog"})})]})})})]})}export{f as default};
+`;function f(){return e.jsxs(e.Fragment,{children:[e.jsx(n,{children:e.jsxs(a,{children:[e.jsx("title",{children:"Cruise Wheels - Home Page"}),e.jsx("meta",{name:"description",content:"Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."}),e.jsx("meta",{name:"keywords",content:"car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),e.jsx(d,{children:e.jsx(l,{children:e.jsxs(m,{children:[e.jsxs(c,{children:["Drive Your Dreams: Explore the World with"," ",e.jsx(h,{children:"Cruise Wheels"})," Rental Cars"]}),e.jsx(p,{children:"Welcome to Cruise Wheels, where every road leads to adventure. CruiseWheels is more than just a rental – it's a gateway to experiences beyond the ordinary. Cruise in style, comfort, and confidence, making every mile a story. Your unforgettable adventure begins with CruiseWheels – Your Drive, Your Experience."}),e.jsx("div",{style:{textAlign:"end"},children:e.jsx(u,{to:"catalog",children:"View our Catalog"})})]})})})]})}export{f as default};

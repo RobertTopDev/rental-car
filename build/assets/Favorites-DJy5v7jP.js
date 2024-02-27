@@ -1,4 +1,4 @@
-import{u as i,p as l,r as s,c as p,i as g,j as e,H as u,a as f,g as x}from"./index-DDd1WRLG.js";import{C as v,v as y}from"./v4-JLfIpmq1.js";import{h as j}from"./heroBg-xqvqUgNj.js";const w=i.div`
+import{u as r,p as l,r as n,c as h,i as g,j as e,H as u,a as f,g as v}from"./index-BPi7vO9s.js";import{C as x,v as y}from"./v4-OvW62yMV.js";import{h as j}from"./heroBg-xqvqUgNj.js";const w=r.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -9,7 +9,7 @@ import{u as i,p as l,r as s,c as p,i as g,j as e,H as u,a as f,g as x}from"./ind
   @media (min-width: 1440px) {
     padding: 9.6rem 12.8rem;
   }
-`,b=i.ul`
+`,b=r.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,14 +36,14 @@ import{u as i,p as l,r as s,c as p,i as g,j as e,H as u,a as f,g as x}from"./ind
     row-gap: 5rem;
     column-gap: 2.4rem;
   }
-`,C=i.div`
-  min-height: 100vh;
-  height: 100vh;
+`,C=r.div`
+  min-height: calc(100vh - 6rem);
+  height: 100%;
   margin: 0 auto;
-`,F=i.div`
+`,F=r.div`
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100vh - 6rem);
   background: url(${j});
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,40 +72,35 @@ import{u as i,p as l,r as s,c as p,i as g,j as e,H as u,a as f,g as x}from"./ind
   }
 
   @media (min-width: 768px) {
-    background-size: 100%;
-    min-height: auto;
     padding: 3.2rem;
     overflow: visible;
   }
-
-  @media (min-width: 1440px) {
-    min-height: 60rem;
-    padding: 3.2rem;
-  }
-`,k=i.div`
+`,k=r.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3.2rem;
   padding: 2.4rem;
-  width: 60%;
+  width: 60rem;
   background-color: ${t=>t.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
   height: 100%;
-`,E=i.h2`
+
+  margin-top: 4.8rem;
+`,E=r.h2`
   color: ${t=>t.theme.colors.lightWhiteColor};
   font-family: ${l};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`,W=i.p`
+`,W=r.p`
   color: ${t=>t.theme.colors.lightWhiteColor};
   font-family: ${l};
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`;function S(){const[t,d]=s.useState([]),a=p(),m=g();return s.useEffect(()=>{async function r(){try{const o=await a(x()),c=JSON.parse(localStorage.getItem("favorites"))||[],n=o.payload.filter(h=>c.includes(h.id));n.length===0&&localStorage.removeItem("favorites"),d(n)}catch(o){console.log(o.message)}}r()},[a,m]),console.log(t.length),e.jsxs(e.Fragment,{children:[e.jsx(u,{children:e.jsxs(f,{children:[e.jsx("title",{children:"Cruise Wheels - Your Favorite Cars"}),e.jsx("meta",{name:"description",content:"Discover and explore your favorite cars with Cruise Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."}),e.jsx("meta",{name:"keywords",content:"favorite cars, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),t.length===0?e.jsx(C,{children:e.jsx(F,{children:e.jsxs(k,{children:[e.jsx(E,{children:"No Favorite Cars Found!"}),e.jsx(W,{children:"It looks like you haven't added any cars to your favorites yet. Explore Cruise Wheels' main page to find stylish and comfy rides for your next journey!"})]})})}):e.jsx(w,{children:e.jsx(b,{children:t==null?void 0:t.map(r=>e.jsx(v,{items:r},y()))})})]})}export{S as default};
+`;function S(){const[t,c]=n.useState([]),a=h(),m=g();return n.useEffect(()=>{async function i(){try{const o=await a(v()),d=JSON.parse(localStorage.getItem("favorites"))||[],s=o.payload.filter(p=>d.includes(p.id));s.length===0&&localStorage.removeItem("favorites"),c(s)}catch(o){console.log(o.message)}}i()},[a,m]),console.log(t.length),e.jsxs(e.Fragment,{children:[e.jsx(u,{children:e.jsxs(f,{children:[e.jsx("title",{children:"Cruise Wheels - Your Favorite Cars"}),e.jsx("meta",{name:"description",content:"Discover and explore your favorite cars with Cruise Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."}),e.jsx("meta",{name:"keywords",content:"favorite cars, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),t.length===0?e.jsx(C,{children:e.jsx(F,{children:e.jsxs(k,{children:[e.jsx(E,{children:"No Favorite Cars Found!"}),e.jsx(W,{children:"It looks like you haven't added any cars to your favorites yet. Explore Cruise Wheels' main page to find stylish and comfy rides for your next journey!"})]})})}):e.jsx(w,{children:e.jsx(b,{children:t==null?void 0:t.map(i=>e.jsx(x,{items:i},y()))})})]})}export{S as default};

@@ -10,6 +10,7 @@ export const CarItem = styled.li`
   height: 100%;
   overflow: hidden;
   max-width: 36.5rem;
+  width: 100%;
 
   @media (min-width: 1440px) {
   }
@@ -44,21 +45,28 @@ export const CardInfoWrapper = styled.div`
 
 export const CartItemTitleWrapper = styled.div`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 `;
 
 export const CartItemTitleWrap = styled.div`
   display: flex;
   align-items: center;
+  /*  */
+  flex-wrap: wrap;
 `;
 
 export const CartItemTitle = styled.h2`
+  display: inline-block;
   font-family: ${primaryFont};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const CartItemTitleModel = styled.span`
+  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const CartItemYear = styled.span`

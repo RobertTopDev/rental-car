@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
+import ModalPopUp from "../Modal/Modal";
 import {
   CarImg,
   CarItem,
@@ -9,21 +10,17 @@ import {
   CartItemTitleWrap,
   CardInfoWrapper,
   CardInfoContainer,
-  CardBtn,
   CardItemTextDescr,
   EmptyHeartIcon,
   FavoriteHeartIcon,
   CarImgWrapper,
   HeartIconWrapper,
+  CartItemTitleModel,
 } from "./CarItems.styled";
-import ModalPopUp from "../Modal/Modal";
-// import { useDispatch } from "react-redux";
-// import { toggleFavorite } from "../../redux/cars/slice";
 
 /* eslint-disable react/prop-types */
-function CarItems({ items, handleFavoriteToggle }) {
+function CarItems({ items }) {
   const [favorite, setFavorite] = useState(false);
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     const favoritesFromStorage =
@@ -49,8 +46,6 @@ function CarItems({ items, handleFavoriteToggle }) {
     localStorage.setItem("favorites", JSON.stringify(favoritesFromStorage));
 
     setFavorite((prevState) => !prevState);
-
-    // handleFavoriteToggle(items?.id);
   }
 
   return (
@@ -74,8 +69,11 @@ function CarItems({ items, handleFavoriteToggle }) {
         <CardInfoWrapper>
           <CartItemTitleWrapper>
             <CartItemTitleWrap>
-              <CartItemTitle>{items.make}</CartItemTitle>
-              <CartItemYear>, {items.year}</CartItemYear>
+              <CartItemTitle>
+                {items.make}{" "}
+                <CartItemTitleModel>{items.model}</CartItemTitleModel>
+                <CartItemYear>, {items.year}</CartItemYear>
+              </CartItemTitle>
             </CartItemTitleWrap>
             <CartItemYear>{items.rentalPrice}</CartItemYear>
           </CartItemTitleWrapper>
