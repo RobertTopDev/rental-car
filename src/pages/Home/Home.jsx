@@ -8,6 +8,7 @@ import {
   HeroText,
   HeroTitleSpan,
 } from "./Home.styled";
+import About from "../../components/About/About";
 
 function Home() {
   return (
@@ -44,6 +45,7 @@ function Home() {
             </div>
           </HeroTextWrapper>
         </HeroWrapper>
+        <About />
       </HomeContainer>
     </>
   );
