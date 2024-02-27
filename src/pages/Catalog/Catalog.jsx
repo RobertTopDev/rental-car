@@ -99,9 +99,7 @@ function Catalog() {
             })
           )}
         </CarsMenu>
-        {showLoadBtn && visibleCars?.length > 12 && (
-          <LoadMore onLoadMoreClick={onLoadMoreClick} />
-        )}
+        {showLoadBtn && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
       </CatalogContainer>
     </>
   );
