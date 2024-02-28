@@ -137,7 +137,7 @@ function Filter({ handlePage }) {
           />
           <FormInputRight
             type="text"
-            placeholder="To $"
+            placeholder="To"
             value={mileageTo}
             onChange={(e) => setMileageTo(e.target.value)}
           />
