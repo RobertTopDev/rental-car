@@ -19,7 +19,6 @@ export const CarImgWrapper = styled.div`
 
 export const CarImg = styled.img`
   width: 100%;
-  /* max-width: 36.5rem; */
   height: auto;
   border-top-right-radius: 1.4rem;
   border-top-left-radius: 1.4rem;

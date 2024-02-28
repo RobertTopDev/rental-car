@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import SocialIcons from "../SocialIcons/SocialIcons";
 import {
   BurgerContainer,
   CloseBurgerMenu,
@@ -10,8 +12,6 @@ import {
   BurgerLogoWrapper,
   MenuText,
 } from "./MenuBurger.styled";
-import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
-import SocialIcons from "../SocialIcons/SocialIcons";
 
 // eslint-disable-next-line react/prop-types
 export default function MenuBurger({ toggleTheme, isDarkTheme }) {

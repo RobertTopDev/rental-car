@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import {
   PrivacyContainer,
   PrivacyRulesWrapper,
@@ -10,7 +11,6 @@ import {
   PrivacyTitleWrapper,
   PrivacyWrapper,
 } from "./Privacy.styled";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // eslint-disable-next-line react/prop-types
 function Privacy({ scrollToTop }) {

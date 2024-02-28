@@ -1,4 +1,6 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import About from "../../components/About/About";
+import Testimonials from "../../components/Testimonials/Testimonials";
 import {
   HeroWrapper,
   HomeContainer,
@@ -8,8 +10,6 @@ import {
   HeroText,
   HeroTitleSpan,
 } from "./Home.styled";
-import About from "../../components/About/About";
-import Testimonials from "../../components/Testimonials/Testimonials";
 
 function Home() {
   return (

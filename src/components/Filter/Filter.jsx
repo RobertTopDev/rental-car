@@ -1,6 +1,12 @@
 import makesData from "../../../makes.json";
 import { v4 as uuid } from "uuid";
-import CreatableSelect from "react-select/creatable";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import {
+  setBrandFilter,
+  setMileageRangeFilter,
+  setPriceFilter,
+} from "../../redux/cars/slice";
 import {
   FormBtn,
   FormLabel,
@@ -14,15 +20,7 @@ import {
   FormInputMileageWrapper,
   ArrowIconDown,
   ArrowIconUp,
-  // SelectOptions,
 } from "./Filter.styled";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import {
-  setBrandFilter,
-  setMileageRangeFilter,
-  setPriceFilter,
-} from "../../redux/cars/slice";
 
 // eslint-disable-next-line react/prop-types
 function Filter({ handlePage }) {

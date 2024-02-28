@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
 import { v4 as uuid } from "uuid";
 import CarItems from "../../components/CarItems/CarItems";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 import {
   FavoritesContainer,
   FavoritesEmptyContainer,
@@ -12,8 +14,6 @@ import {
   FavoritesEmptyWrapper,
   FavoritesMenu,
 } from "./Favorites.styled";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
 
 function Favorites() {
   const [favoriteCars, setFavoriteCars] = useState([]);

@@ -1,36 +1,17 @@
 import { useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import MenuBurger from "../MenuBurger/MenuBurger";
 import {
   HeaderContainer,
   HeaderLink,
   HeaderTextWrapper,
   NavBar,
 } from "./Header.styled";
-// import { useEffect, useState } from "react";
-import MenuBurger from "../MenuBurger/MenuBurger";
 
 // eslint-disable-next-line react/prop-types
 function Header({ toggleTheme, isDarkTheme }) {
   const location = useLocation();
-
-  // const [favoriteCars, setFavoriteCars] = useState(false);
-
-  // useEffect(() => {
-  //   async function getFavoriteCars() {
-  //     try {
-  //       const favoritesFromStorage =
-  //         JSON.parse(localStorage.getItem("favorites")) || [];
-  //       if (favoritesFromStorage.length !== 0) {
-  //         setFavoriteCars(true);
-  //       }
-  //     } catch (err) {
-  //       console.log(err.message);
-  //     }
-  //   }
-
-  //   getFavoriteCars();
-  // }, []);
 
   return (
     <HeaderContainer>

@@ -1,4 +1,5 @@
 import { IoIosQuote } from "react-icons/io";
+import StarRating from "../StarRating/StarRating";
 import {
   ClientsContainer,
   ClientsTopWrapper,
@@ -7,7 +8,6 @@ import {
   ClientsName,
   QuoteIcon,
 } from "./Clients.styled";
-import StarRating from "../StarRating/StarRating";
 
 const ClientSlider = (props) => {
   // eslint-disable-next-line react/prop-types

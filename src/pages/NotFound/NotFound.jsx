@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import {
   NotFoundContainer,
   NotFoundText,
@@ -6,13 +7,13 @@ import {
   NotFoundTitle,
   NotFoundWrapper,
 } from "./NotFound.styled";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // eslint-disable-next-line react/prop-types
 function NotFound({ scrollToTop }) {
   useEffect(() => {
     scrollToTop();
   }, []);
+
   return (
     <>
       <HelmetProvider>
