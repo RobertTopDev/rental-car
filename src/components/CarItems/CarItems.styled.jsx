@@ -11,9 +11,6 @@ export const CarItem = styled.li`
   overflow: hidden;
   max-width: 36.5rem;
   width: 100%;
-
-  @media (min-width: 1440px) {
-  }
 `;
 
 export const CarImgWrapper = styled.div`
@@ -22,6 +19,7 @@ export const CarImgWrapper = styled.div`
 
 export const CarImg = styled.img`
   width: 100%;
+  /* max-width: 36.5rem; */
   height: auto;
   border-top-right-radius: 1.4rem;
   border-top-left-radius: 1.4rem;

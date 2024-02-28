@@ -56,14 +56,35 @@ function Catalog() {
     fetchedData();
   }, [dispatch, page, totalCars]);
 
+  // function filteredByCars() {
+  //   const filtered = displayedCars.filter(
+  //     (item) =>
+  //       item.make === filteredCars.brand &&
+  //       parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price &&
+  //       item.mileage > filteredCars.mileageRange.min &&
+  //       item.mileage <= filteredCars.mileageRange.max
+  //   );
+
+  //   return filtered;
+  // }
+
+  // const visibleCars = filteredByCars();
+
   function filteredByCars() {
-    const filtered = displayedCars.filter(
-      (item) =>
-        item.make === filteredCars.brand &&
-        parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price &&
-        item.mileage > filteredCars.mileageRange.min &&
-        item.mileage <= filteredCars.mileageRange.max
-    );
+    const filtered = displayedCars.filter((item) => {
+      const brandCondition =
+        !filteredCars.brand || item.make === filteredCars.brand;
+      const priceCondition =
+        !filteredCars.price ||
+        parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price;
+      const mileageCondition =
+        !filteredCars.mileageRange ||
+        (item.mileage > filteredCars.mileageRange.min &&
+          item.mileage <= filteredCars.mileageRange.max);
+
+      return brandCondition && priceCondition && mileageCondition;
+    });
+
     return filtered;
   }
 
@@ -87,6 +108,27 @@ function Catalog() {
       <CatalogContainer>
         <Filter handlePage={handlePage} />
         <CarsMenu>
+          {/* {filteredCars.brand || filteredCars.price || filteredCars.mileageRange
+            ? visibleCars.length > 0
+              ? visibleCars.map((items) => (
+                  <CarItems key={uuid()} items={items} />
+                ))
+              : cars.map((items) => <CarItems key={uuid()} items={items} />)
+            : cars.map((items) => <CarItems key={uuid()} items={items} />)} */}
+          {/* {(visibleCars?.length === 0 && filteredCars?.brand?.length) > 0 ||
+          filteredCars.price.length > 0 ||
+          filteredCars.mileageRange.min.length > 0 ||
+          filteredCars.mileageRange.max.length > 0 ? (
+            <NoMatchCar>No matching cars found</NoMatchCar>
+          ) : visibleCars?.length > 0 ? (
+            visibleCars?.map((items) => {
+              return <CarItems key={uuid()} items={items} />;
+            })
+          ) : (
+            cars?.map((items) => {
+              return <CarItems key={uuid()} items={items} />;
+            })
+          )} */}
           {visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
             <NoMatchCar>No matching cars found</NoMatchCar>
           ) : visibleCars?.length > 0 ? (

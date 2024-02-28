@@ -74,6 +74,7 @@ function Filter({ handlePage }) {
         to: mileageTo || "15000",
       },
     };
+
     if (selectedPrice === "") {
       setSelectedPrice("250");
     }
