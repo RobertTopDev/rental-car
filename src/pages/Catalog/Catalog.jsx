@@ -85,7 +85,7 @@ function Catalog() {
         parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price;
       const mileageCondition =
         !filteredCars.mileageRange ||
-        (item.mileage > filteredCars.mileageRange.min &&
+        (item.mileage >= filteredCars.mileageRange.min &&
           item.mileage <= filteredCars.mileageRange.max);
 
       // console.log(

@@ -22,6 +22,7 @@ import {
   FormInputMileageWrapper,
   ArrowIconDown,
   ArrowIconUp,
+  ResetBtn,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
@@ -61,6 +62,29 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   const handleOptionPriceClick = (price) => {
     setSelectedPrice(price);
     setIsOpenPrice(false);
+  };
+
+  const resetFilters = async () => {
+    setSelectedBrand("");
+    setSelectedPrice("");
+    setMileageFrom("");
+    setMileageTo("");
+    // Add any other filter state variables that need to be reset
+
+    // Fetch all cars without filters
+    const allCarsResponse = await dispatch(fetchAllCars());
+    setDisplayedCars(allCarsResponse.payload);
+
+    dispatch(setBrandFilter(""));
+    dispatch(setPriceFilter(""));
+    dispatch(setMileageRangeFilter({ min: "", max: "" }));
+
+    setFilteredSearch(false);
+  };
+
+  const handleReset = () => {
+    resetFilters();
+    handlePage();
   };
 
   async function handleSubmit(e) {
@@ -169,18 +193,21 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
           <FormInputLeft
             type="text"
             placeholder="From"
-            value={mileageFrom}
+            value={mileageFrom ? parseInt(mileageFrom).toLocaleString() : ""}
             onChange={(e) => setMileageFrom(e.target.value)}
           />
           <FormInputRight
             type="text"
             placeholder="To"
-            value={mileageTo}
+            value={mileageTo ? parseInt(mileageTo).toLocaleString() : ""}
             onChange={(e) => setMileageTo(e.target.value)}
           />
         </FormInputMileageWrapper>
       </OptionWrapper>
       <FormBtn type="submit">Search</FormBtn>
+      <ResetBtn onClick={handleReset} type="button">
+        Reset
+      </ResetBtn>
     </FormWrapper>
   );
 }

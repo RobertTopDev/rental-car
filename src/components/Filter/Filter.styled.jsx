@@ -42,6 +42,44 @@ export const FormBtn = styled.button`
     cursor: pointer;
     background-color: ${(p) => p.theme.colors.accentColorHover};
   }
+
+  @media (min-width: 768px) {
+    padding: 1.4rem 3.2rem;
+  }
+
+  @media (min-width: 840px) {
+    padding: 1.4rem 4.4rem;
+  }
+`;
+
+export const ResetBtn = styled.button`
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 1.4rem;
+  padding: 1.4rem 4.4rem;
+  background-color: transparent;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  transition: all var(--primary-transition);
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+    color: ${(p) => p.theme.colors.accentColor};
+    border-bottom: 1px solid ${(p) => p.theme.colors.accentColor};
+    border-top: 1px solid ${(p) => p.theme.colors.accentColor};
+    text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1.4rem 3.2rem;
+  }
+
+  @media (min-width: 860px) {
+    padding: 1.4rem 4.4rem;
+  }
 `;
 
 export const SelectInput = styled.div`
@@ -72,7 +110,11 @@ export const SelectInput = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 14.4rem;
+    width: 14rem;
+  }
+
+  @media (min-width: 840px) {
+    width: 16rem;
   }
 
   @media (min-width: 1000px) {
@@ -184,6 +226,7 @@ export const FormInputRight = styled.input`
     width: 16rem;
   }
 `;
+
 export const FormInputLeft = styled.input`
   border: none;
   outline: none;
