@@ -2,6 +2,8 @@ import makesData from "../../../makes.json";
 import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { fetchAllCars } from "../../redux/cars/operations";
+import { toast } from "react-toastify";
 import {
   setBrandFilter,
   setMileageRangeFilter,
@@ -21,8 +23,6 @@ import {
   ArrowIconDown,
   ArrowIconUp,
 } from "./Filter.styled";
-import { fetchAllCars } from "../../redux/cars/operations";
-import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
