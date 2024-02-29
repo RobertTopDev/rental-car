@@ -65,11 +65,16 @@ export const ModalTitleWrapper = styled.div`
 `;
 
 export const ModalTitle = styled.h3`
+  display: inline-block;
   font-family: ${primaryFont};
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.33333;
   color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalTitleModel = styled.span`
+  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const ModalTitleText = styled.span`

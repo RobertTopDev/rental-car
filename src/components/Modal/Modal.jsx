@@ -21,6 +21,7 @@ import {
   ModalConditionAdd,
   ModalConditionAccentColor,
   CloseModal,
+  ModalTitleModel,
 } from "./Modal.styled";
 
 function ModalPopUp({ items }) {
@@ -65,7 +66,10 @@ function ModalPopUp({ items }) {
             <ModalTitleDescrContainer>
               <ModalTitleContainer>
                 <ModalTitleWrapper>
-                  <ModalTitle>{items.make}</ModalTitle>
+                  <ModalTitle>
+                    {items.make}{" "}
+                    <ModalTitleModel>{items.model}</ModalTitleModel>
+                  </ModalTitle>
                   <ModalTitleText>, {items.year}</ModalTitleText>
                 </ModalTitleWrapper>
                 <div>
@@ -108,9 +112,29 @@ function ModalPopUp({ items }) {
                     .split("\n")
                     .map((condition, index) => (
                       <ModalCondition key={index}>
-                        {condition.trim()}
+                        {index === 0 ? (
+                          <>
+                            {condition.split(":")[0]}:{" "}
+                            <span
+                              style={{
+                                color: "#3470ff",
+                              }}
+                            >
+                              {condition.split(":")[1]}
+                            </span>
+                          </>
+                        ) : (
+                          condition.trim()
+                        )}
                       </ModalCondition>
                     ))}
+                  {/* {items.rentalConditions
+                    .split("\n")
+                    .map((condition, index) => (
+                      <ModalCondition key={index}>
+                        {condition.trim()}
+                      </ModalCondition>
+                    ))} */}
                   <ModalConditionAdd>
                     Mileage:{" "}
                     <ModalConditionAccentColor>

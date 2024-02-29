@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectCars, selectFiltersCars } from "../../redux/cars/selectors";
 import { useEffect, useState } from "react";
-import { fetchAllCars, fetchCars } from "../../redux/cars/operations";
+import { fetchCars } from "../../redux/cars/operations";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
 import { CarsMenu, CatalogContainer, NoMatchCar } from "./Catalog.styled";
@@ -13,17 +13,12 @@ function Catalog() {
   const dispatch = useDispatch();
   const cars = useSelector(selectCars);
 
-  const [initialLoading, setInitialLoading] = useState(true);
   const [filteredSearch, setFilteredSearch] = useState(false);
   const [page, setPage] = useState(1);
   const [showLoadBtn, setShowLoadBtn] = useState(true);
   const [displayedCars, setDisplayedCars] = useState([]);
 
   const filteredCars = useSelector(selectFiltersCars);
-
-  async function handleFavoriteToggle(carId) {
-    // await dispatch(toggleFavorite(carId));
-  }
 
   function onLoadMoreClick() {
     setPage((page) => page + 1);
@@ -50,8 +45,6 @@ function Catalog() {
         await dispatch(fetchCars(page)).unwrap();
       } catch (error) {
         console.log(error.message);
-      } finally {
-        setInitialLoading(false);
       }
     }
     fetchedData();
