@@ -14,6 +14,7 @@ function Catalog() {
   const cars = useSelector(selectCars);
 
   const [initialLoading, setInitialLoading] = useState(true);
+  const [filteredSearch, setFilteredSearch] = useState(false);
   const [page, setPage] = useState(1);
   const [showLoadBtn, setShowLoadBtn] = useState(true);
   const [displayedCars, setDisplayedCars] = useState([]);
@@ -41,8 +42,8 @@ function Catalog() {
   useEffect(() => {
     async function fetchedData() {
       try {
-        const allCarsResponse = await dispatch(fetchAllCars());
-        setDisplayedCars(allCarsResponse.payload);
+        // const allCarsResponse = await dispatch(fetchAllCars());
+        // setDisplayedCars(allCarsResponse.payload);
 
         setShowLoadBtn(page < totalCars);
 
@@ -70,17 +71,26 @@ function Catalog() {
 
   // const visibleCars = filteredByCars();
 
+  // displayedCars.filter((item) =>
+  //   console.log(parseInt(item.rentalPrice.replace("$", "")))
+  // );
+  // console.log(filteredCars.price);
+  // displayedCars.filter((item) => console.log(item.rentalPrice));
+
   function filteredByCars() {
     const filtered = displayedCars.filter((item) => {
       const brandCondition =
         !filteredCars.brand || item.make === filteredCars.brand;
       const priceCondition =
-        !filteredCars.price ||
         parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price;
       const mileageCondition =
         !filteredCars.mileageRange ||
         (item.mileage > filteredCars.mileageRange.min &&
           item.mileage <= filteredCars.mileageRange.max);
+
+      // console.log(
+      //   parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price
+      // );
 
       return brandCondition && priceCondition && mileageCondition;
     });
@@ -89,6 +99,10 @@ function Catalog() {
   }
 
   const visibleCars = filteredByCars();
+
+  // console.log(visibleCars);
+  // console.log(visibleCars.length);
+  // console.log(filteredSearch);
 
   return (
     <>
@@ -106,7 +120,11 @@ function Catalog() {
         </Helmet>
       </HelmetProvider>
       <CatalogContainer>
-        <Filter handlePage={handlePage} />
+        <Filter
+          handlePage={handlePage}
+          setDisplayedCars={setDisplayedCars}
+          setFilteredSearch={setFilteredSearch}
+        />
         <CarsMenu>
           {/* {filteredCars.brand || filteredCars.price || filteredCars.mileageRange
             ? visibleCars.length > 0
@@ -129,7 +147,7 @@ function Catalog() {
               return <CarItems key={uuid()} items={items} />;
             })
           )} */}
-          {visibleCars?.length === 0 && filteredCars?.brand?.length > 0 ? (
+          {visibleCars && visibleCars?.length === 0 && filteredSearch ? (
             <NoMatchCar>No matching cars found</NoMatchCar>
           ) : visibleCars?.length > 0 ? (
             visibleCars?.map((items) => {
@@ -141,7 +159,12 @@ function Catalog() {
             })
           )}
         </CarsMenu>
-        {showLoadBtn && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
+        {filteredSearch && visibleCars.length > 12 && (
+          <LoadMore onLoadMoreClick={onLoadMoreClick} />
+        )}
+        {!filteredSearch && showLoadBtn && (
+          <LoadMore onLoadMoreClick={onLoadMoreClick} />
+        )}
       </CatalogContainer>
     </>
   );

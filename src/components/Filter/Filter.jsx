@@ -21,9 +21,11 @@ import {
   ArrowIconDown,
   ArrowIconUp,
 } from "./Filter.styled";
+import { fetchAllCars } from "../../redux/cars/operations";
+import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
-function Filter({ handlePage }) {
+function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
   const [mileageFrom, setMileageFrom] = useState("");
@@ -61,21 +63,57 @@ function Filter({ handlePage }) {
     setIsOpenPrice(false);
   };
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
+    if (
+      selectedBrand.length === 0 &&
+      !selectedPrice &&
+      mileageFrom.length === 0 &&
+      mileageTo.length === 0
+    ) {
+      toast.warning(
+        "Please choose a brand, price, or mileage range to refine your search.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+        }
+      );
+
+      return;
+    }
+
+    // console.log(selectedBrand.length);
+    // console.log(!selectedPrice);
+    // console.log(mileageFrom.length);
+    // console.log(mileageTo.length);
 
     const filters = {
       brand: selectedBrand,
+      // price: selectedPrice,
       price: selectedPrice || "250",
       mileage: {
+        // from: mileageFrom,
+        // to: mileageTo,
         from: mileageFrom || "0",
         to: mileageTo || "15000",
       },
     };
 
-    if (selectedPrice === "") {
-      setSelectedPrice("250");
-    }
+    const allCarsResponse = await dispatch(fetchAllCars());
+    setDisplayedCars(allCarsResponse.payload);
+
+    setFilteredSearch(true);
+
+    // if (selectedPrice === "") {
+    //   setSelectedPrice("250");
+    // }
 
     dispatch(setBrandFilter(filters.brand));
     dispatch(setPriceFilter(filters.price));
@@ -88,10 +126,10 @@ function Filter({ handlePage }) {
 
     handlePage();
 
-    setSelectedBrand("");
-    setSelectedPrice("");
-    setMileageFrom("");
-    setMileageTo("");
+    // setSelectedBrand("");
+    // setSelectedPrice("");
+    // setMileageFrom("");
+    // setMileageTo("");
   }
 
   return (

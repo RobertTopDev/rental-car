@@ -10,8 +10,8 @@ const initialState = {
   },
   filter: {
     brand: "",
-    price: "",
-    mileageRange: { min: 0, max: 0 },
+    price: 250,
+    mileageRange: { min: 0, max: 15000 },
   },
 };
 

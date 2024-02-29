@@ -47,7 +47,6 @@ function Favorites() {
     getFavoriteCars();
   }, [dispatch, navigate]);
 
-  console.log(favoriteCars.length);
   return (
     <>
       <HelmetProvider>

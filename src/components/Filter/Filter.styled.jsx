@@ -71,7 +71,11 @@ export const SelectInput = styled.div`
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
+    width: 14.4rem;
+  }
+
+  @media (min-width: 1000px) {
     width: 22.4rem;
   }
 `;
