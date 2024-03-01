@@ -1,4 +1,4 @@
-import{b as r,p as l,r as n,t as h,F as g,j as e,H as f,n as u,x}from"./index-5Z8bNcPP.js";import{C as v,v as y}from"./v4-C2SBEUU8.js";import{h as j}from"./heroBg-xqvqUgNj.js";const w=r.div`
+import{b as r,p as l,r as n,t as h,J as g,j as e,H as f,n as u,y as v}from"./index-CAGjrYee.js";import{C as x,v as y}from"./v4-KNvhz6Ze.js";import{h as j}from"./heroBg-xqvqUgNj.js";const w=r.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -36,11 +36,11 @@ import{b as r,p as l,r as n,t as h,F as g,j as e,H as f,n as u,x}from"./index-5Z
     row-gap: 5rem;
     column-gap: 2.4rem;
   }
-`,F=r.div`
+`,C=r.div`
   min-height: calc(100vh - 6rem);
   height: 100%;
   margin: 0 auto;
-`,C=r.div`
+`,F=r.div`
   position: relative;
   width: 100%;
   min-height: calc(100vh - 6rem);
@@ -103,4 +103,4 @@ import{b as r,p as l,r as n,t as h,F as g,j as e,H as f,n as u,x}from"./index-5Z
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-`;function S(){const[t,c]=n.useState([]),a=h(),m=g();return n.useEffect(()=>{async function i(){try{const o=await a(x()),d=JSON.parse(localStorage.getItem("favorites"))||[],s=o.payload.filter(p=>d.includes(p.id));s.length===0&&localStorage.removeItem("favorites"),c(s)}catch(o){console.log(o.message)}}i()},[a,m]),e.jsxs(e.Fragment,{children:[e.jsx(f,{children:e.jsxs(u,{children:[e.jsx("title",{children:"Cruise Wheels - Your Favorite Cars"}),e.jsx("meta",{name:"description",content:"Discover and explore your favorite cars with Cruise Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."}),e.jsx("meta",{name:"keywords",content:"favorite cars, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),t.length===0?e.jsx(F,{children:e.jsx(C,{children:e.jsxs(k,{children:[e.jsx(E,{children:"No Favorite Cars Found!"}),e.jsx(W,{children:"It looks like you haven't added any cars to your favorites yet. Explore Cruise Wheels' main page to find stylish and comfy rides for your next journey!"})]})})}):e.jsx(w,{children:e.jsx(b,{children:t==null?void 0:t.map(i=>e.jsx(v,{items:i},y()))})})]})}export{S as default};
+`;function S(){const[t,c]=n.useState([]),a=h(),m=g();return n.useEffect(()=>{async function i(){try{const o=await a(v()),d=JSON.parse(localStorage.getItem("favorites"))||[],s=o.payload.filter(p=>d.includes(p.id));s.length===0&&localStorage.removeItem("favorites"),c(s)}catch(o){console.log(o.message)}}i()},[a,m]),e.jsxs(e.Fragment,{children:[e.jsx(f,{children:e.jsxs(u,{children:[e.jsx("title",{children:"Cruise Wheels - Your Favorite Cars"}),e.jsx("meta",{name:"description",content:"Discover and explore your favorite cars with Cruise Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."}),e.jsx("meta",{name:"keywords",content:"favorite cars, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),t.length===0?e.jsx(C,{children:e.jsx(F,{children:e.jsxs(k,{children:[e.jsx(E,{children:"No Favorite Cars Found!"}),e.jsx(W,{children:"It looks like you haven't added any cars to your favorites yet. Explore Cruise Wheels' main page to find stylish and comfy rides for your next journey!"})]})})}):e.jsx(w,{children:e.jsx(b,{children:t==null?void 0:t.map(i=>e.jsx(x,{items:i},y()))})})]})}export{S as default};
