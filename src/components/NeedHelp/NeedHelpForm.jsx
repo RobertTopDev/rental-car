@@ -1,4 +1,7 @@
 import { toast } from "react-toastify";
+import { fetchEmailDB } from "../../services/emailPost";
+import emailRegex from "../../regex/emailRegex";
+import { commonToastOptions } from "../../helpers/toastOptions";
 import {
   NeedHelpFormWrapper,
   NeedHelpInput,
@@ -10,7 +13,7 @@ import {
 
 // eslint-disable-next-line react/prop-types
 function NeedHelpForm({ handleNeedHelpCloseModal, setNeedHelp }) {
-  const handleNeedHelp = (e) => {
+  const handleNeedHelp = async (e) => {
     e.preventDefault();
 
     const data = {
@@ -18,31 +21,43 @@ function NeedHelpForm({ handleNeedHelpCloseModal, setNeedHelp }) {
       message: e.target.comment.value,
     };
 
-    if (data.email.length === 0 || data.message.length === 0) {
-      toast.warning("Please fill in all required fields.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        progress: undefined,
-        theme: "light",
-      });
+    const validEmail = emailRegex.test(data.email);
+    const validMessage = data.message.length > 0;
+
+    if (validEmail && validMessage) {
+      try {
+        await fetchEmailDB(data);
+        toast.success(
+          "Thank you for reaching out! Your message has been received.",
+          commonToastOptions
+        );
+      } catch (error) {
+        toast.error(
+          "Error submitting request. Please try again later.",
+          commonToastOptions
+        );
+      }
     } else {
-      toast.success(
-        "Thank you for reaching out! Your message has been received, and we will review it soon. We appreciate your request for help.",
-        {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          progress: undefined,
-          theme: "light",
-        }
-      );
+      if (!validMessage && data.email.length === 0) {
+        toast.warning(
+          "Please fill in all required fields!",
+          commonToastOptions
+        );
+        return;
+      }
+
+      if (!validEmail) {
+        toast.warning(
+          "Please enter a valid email address!",
+          commonToastOptions
+        );
+        return;
+      }
+
+      if (!validMessage) {
+        toast.warning("Please enter a message!", commonToastOptions);
+        return;
+      }
     }
 
     setNeedHelp((prevState) => !prevState);

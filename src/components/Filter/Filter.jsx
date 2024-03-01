@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
 import { toast } from "react-toastify";
+import { commonToastOptions } from "../../helpers/toastOptions";
 import {
   setBrandFilter,
   setMileageRangeFilter,
@@ -96,16 +97,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     ) {
       toast.warning(
         "Please choose a brand, price, or mileage range to refine your search.",
-        {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          progress: undefined,
-          theme: "light",
-        }
+        commonToastOptions
       );
 
       return;
