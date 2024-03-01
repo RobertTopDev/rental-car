@@ -69,9 +69,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     setSelectedPrice("");
     setMileageFrom("");
     setMileageTo("");
-    // Add any other filter state variables that need to be reset
 
-    // Fetch all cars without filters
     const allCarsResponse = await dispatch(fetchAllCars());
     setDisplayedCars(allCarsResponse.payload);
 
@@ -113,18 +111,10 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
       return;
     }
 
-    // console.log(selectedBrand.length);
-    // console.log(!selectedPrice);
-    // console.log(mileageFrom.length);
-    // console.log(mileageTo.length);
-
     const filters = {
       brand: selectedBrand,
-      // price: selectedPrice,
       price: selectedPrice || "250",
       mileage: {
-        // from: mileageFrom,
-        // to: mileageTo,
         from: mileageFrom || "0",
         to: mileageTo || "15000",
       },
@@ -134,10 +124,6 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     setDisplayedCars(allCarsResponse.payload);
 
     setFilteredSearch(true);
-
-    // if (selectedPrice === "") {
-    //   setSelectedPrice("250");
-    // }
 
     dispatch(setBrandFilter(filters.brand));
     dispatch(setPriceFilter(filters.price));
@@ -149,11 +135,6 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     );
 
     handlePage();
-
-    // setSelectedBrand("");
-    // setSelectedPrice("");
-    // setMileageFrom("");
-    // setMileageTo("");
   }
 
   return (

@@ -62,7 +62,6 @@ export const NeedHelpText = styled.textarea`
   width: 100%;
   border-radius: 0.6rem;
   background-color: ${(p) => p.theme.colors.headerBgColor};
-  /* background-color: ${(p) => p.theme.colors.inputBgColor}; */
   padding: 1.2rem;
 
   font-family: ${primaryFont};

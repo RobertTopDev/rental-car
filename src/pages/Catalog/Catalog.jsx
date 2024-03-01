@@ -37,9 +37,6 @@ function Catalog() {
   useEffect(() => {
     async function fetchedData() {
       try {
-        // const allCarsResponse = await dispatch(fetchAllCars());
-        // setDisplayedCars(allCarsResponse.payload);
-
         setShowLoadBtn(page < totalCars);
 
         await dispatch(fetchCars(page)).unwrap();
@@ -49,26 +46,6 @@ function Catalog() {
     }
     fetchedData();
   }, [dispatch, page, totalCars]);
-
-  // function filteredByCars() {
-  //   const filtered = displayedCars.filter(
-  //     (item) =>
-  //       item.make === filteredCars.brand &&
-  //       parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price &&
-  //       item.mileage > filteredCars.mileageRange.min &&
-  //       item.mileage <= filteredCars.mileageRange.max
-  //   );
-
-  //   return filtered;
-  // }
-
-  // const visibleCars = filteredByCars();
-
-  // displayedCars.filter((item) =>
-  //   console.log(parseInt(item.rentalPrice.replace("$", "")))
-  // );
-  // console.log(filteredCars.price);
-  // displayedCars.filter((item) => console.log(item.rentalPrice));
 
   function filteredByCars() {
     const filtered = displayedCars.filter((item) => {
@@ -81,10 +58,6 @@ function Catalog() {
         (item.mileage >= filteredCars.mileageRange.min &&
           item.mileage <= filteredCars.mileageRange.max);
 
-      // console.log(
-      //   parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price
-      // );
-
       return brandCondition && priceCondition && mileageCondition;
     });
 
@@ -92,10 +65,6 @@ function Catalog() {
   }
 
   const visibleCars = filteredByCars();
-
-  // console.log(visibleCars);
-  // console.log(visibleCars.length);
-  // console.log(filteredSearch);
 
   return (
     <>
@@ -119,27 +88,6 @@ function Catalog() {
           setFilteredSearch={setFilteredSearch}
         />
         <CarsMenu>
-          {/* {filteredCars.brand || filteredCars.price || filteredCars.mileageRange
-            ? visibleCars.length > 0
-              ? visibleCars.map((items) => (
-                  <CarItems key={uuid()} items={items} />
-                ))
-              : cars.map((items) => <CarItems key={uuid()} items={items} />)
-            : cars.map((items) => <CarItems key={uuid()} items={items} />)} */}
-          {/* {(visibleCars?.length === 0 && filteredCars?.brand?.length) > 0 ||
-          filteredCars.price.length > 0 ||
-          filteredCars.mileageRange.min.length > 0 ||
-          filteredCars.mileageRange.max.length > 0 ? (
-            <NoMatchCar>No matching cars found</NoMatchCar>
-          ) : visibleCars?.length > 0 ? (
-            visibleCars?.map((items) => {
-              return <CarItems key={uuid()} items={items} />;
-            })
-          ) : (
-            cars?.map((items) => {
-              return <CarItems key={uuid()} items={items} />;
-            })
-          )} */}
           {visibleCars && visibleCars?.length === 0 && filteredSearch ? (
             <NoMatchCar>No matching cars found</NoMatchCar>
           ) : visibleCars?.length > 0 ? (
