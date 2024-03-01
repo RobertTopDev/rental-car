@@ -55,21 +55,16 @@ export default function NeedHelp() {
           onMouseMove={handleMouseMove}
           ref={areaRef}
         >
-          {/* <NeedHelpBtn
-            type="button"
-            onClick={handleNeedHelpModal}
-            onMouseMove={handleMouseMove}
-            ref={areaRef}
-          > */}
           {!needHelp ? (
             <NeedHelpBtnIcon onClick={handleNeedHelpOpenModal} />
           ) : (
-            <NeedHelpForm handleNeedHelpCloseModal={handleNeedHelpCloseModal} />
+            <NeedHelpForm
+              handleNeedHelpCloseModal={handleNeedHelpCloseModal}
+              setNeedHelp={setNeedHelp}
+            />
           )}
-          {/* </NeedHelpBtn> */}
         </NeedHelpModal>
       </Tooltip>
-      {/* {needHelp && <NeedHelpModal />} */}
     </>
   );
 }

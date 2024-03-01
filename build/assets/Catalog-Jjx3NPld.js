@@ -1,4 +1,4 @@
-import{b as t,p as d,n as J,o as Y,r as a,q as U,j as o,B as q,t as I,v as L,x as O,y as z,z as R,H as G,m as K,A as Q}from"./index-C4Eg2AV4.js";import{v as P,C as T}from"./v4-BVNqNMmi.js";const X=e=>e.cars.cars.items,Z=e=>e.cars.filter,_=t.div`
+import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z as O,A as z,C as R,H as G,n as K,D as Q}from"./index-BaA2gwDV.js";import{v as P,C as T}from"./v4-DpNzY0Gc.js";const X=e=>e.cars.cars.items,Z=e=>e.cars.filter,_=t.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -188,7 +188,7 @@ import{b as t,p as d,n as J,o as Y,r as a,q as U,j as o,B as q,t as I,v as L,x a
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-`,W=t.span`
+`,D=t.span`
   font-family: ${d};
   font-weight: 500;
   font-size: 16px;
@@ -291,7 +291,7 @@ import{b as t,p as d,n as J,o as Y,r as a,q as U,j as o,B as q,t as I,v as L,x a
   position: absolute;
   bottom: 0;
   left: 0;
-`;const D=t(J)`
+`;const W=t(J)`
   font-size: 1.8rem;
   color: ${e=>e.theme.colors.black};
 
@@ -325,7 +325,7 @@ import{b as t,p as d,n as J,o as Y,r as a,q as U,j as o,B as q,t as I,v as L,x a
   @media (min-width: 1440px) {
     right: 1.2rem;
   }
-`;function ce({handlePage:e,setDisplayedCars:h,setFilteredSearch:p}){const[w,g]=a.useState(""),[u,C]=a.useState(""),[x,y]=a.useState(""),[f,l]=a.useState(""),[b,k]=a.useState(!1),[v,j]=a.useState(!1),i=U(),$=()=>{const r=[];for(let c=10;c<=250;c+=10)r.push(o.jsxs(W,{onClick:()=>s(c),children:[c," $"]},P()));return r},n=r=>{g(r),k(!1)},s=r=>{C(r),j(!1)},m=async()=>{g(""),C(""),y(""),l("");const r=await i(I());h(r.payload),i(L("")),i(O("")),i(z({min:"",max:""})),p(!1)},S=()=>{m(),e()};async function B(r){if(r.preventDefault(),w.length===0&&!u&&x.length===0&&f.length===0){q.warning("Please choose a brand, price, or mileage range to refine your search.",{position:"top-right",autoClose:3e3,hideProgressBar:!1,closeOnClick:!0,pauseOnHover:!1,draggable:!1,progress:void 0,theme:"light"});return}const c={brand:w,price:u||"250",mileage:{from:x||"0",to:f||"15000"}},V=await i(I());h(V.payload),p(!0),i(L(c.brand)),i(O(c.price)),i(z({min:c.mileage.from,max:c.mileage.to})),e()}return o.jsxs(te,{onSubmit:B,children:[o.jsxs(F,{children:[o.jsx(M,{htmlFor:"carBrand",children:"Car brand:"}),o.jsxs(H,{onClick:()=>k(!b),children:[w||"Enter the text",b?o.jsx(E,{}):o.jsx(D,{})]}),b&&o.jsx(A,{children:re.map(r=>o.jsx(W,{onClick:()=>n(r),children:r},r))})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"price",children:"Price / 1 hour"}),o.jsxs(H,{onClick:()=>j(!v),children:[u||"To $",v?o.jsx(E,{}):o.jsx(D,{})]}),v&&o.jsx(A,{children:$()})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"mileage",children:"Car mileage / km"}),o.jsxs(ae,{children:[o.jsx(le,{type:"text",placeholder:"From",value:x?parseInt(x).toLocaleString():"",onChange:r=>y(r.target.value)}),o.jsx(se,{type:"text",placeholder:"To",value:f?parseInt(f).toLocaleString():"",onChange:r=>l(r.target.value)})]})]}),o.jsx(ne,{type:"submit",children:"Search"}),o.jsx(ie,{onClick:S,type:"button",children:"Reset"})]})}const de=t.button`
+`;function ce({handlePage:e,setDisplayedCars:h,setFilteredSearch:p}){const[w,g]=a.useState(""),[u,C]=a.useState(""),[x,y]=a.useState(""),[f,l]=a.useState(""),[b,k]=a.useState(!1),[v,j]=a.useState(!1),i=U(),$=()=>{const r=[];for(let c=10;c<=250;c+=10)r.push(o.jsxs(D,{onClick:()=>s(c),children:[c," $"]},P()));return r},n=r=>{g(r),k(!1)},s=r=>{C(r),j(!1)},m=async()=>{g(""),C(""),y(""),l("");const r=await i(I());h(r.payload),i(L("")),i(O("")),i(z({min:"",max:""})),p(!1)},S=()=>{m(),e()};async function B(r){if(r.preventDefault(),w.length===0&&!u&&x.length===0&&f.length===0){q.warning("Please choose a brand, price, or mileage range to refine your search.",{position:"top-right",autoClose:3e3,hideProgressBar:!1,closeOnClick:!0,pauseOnHover:!1,draggable:!1,progress:void 0,theme:"light"});return}const c={brand:w,price:u||"250",mileage:{from:x||"0",to:f||"15000"}},V=await i(I());h(V.payload),p(!0),i(L(c.brand)),i(O(c.price)),i(z({min:c.mileage.from,max:c.mileage.to})),e()}return o.jsxs(te,{onSubmit:B,children:[o.jsxs(F,{children:[o.jsx(M,{htmlFor:"carBrand",children:"Car brand:"}),o.jsxs(H,{onClick:()=>k(!b),children:[w||"Enter the text",b?o.jsx(E,{}):o.jsx(W,{})]}),b&&o.jsx(A,{children:re.map(r=>o.jsx(D,{onClick:()=>n(r),children:r},r))})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"price",children:"Price / 1 hour"}),o.jsxs(H,{onClick:()=>j(!v),children:[u||"To $",v?o.jsx(E,{}):o.jsx(W,{})]}),v&&o.jsx(A,{children:$()})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"mileage",children:"Car mileage / km"}),o.jsxs(ae,{children:[o.jsx(le,{type:"text",placeholder:"From",value:x?parseInt(x).toLocaleString():"",onChange:r=>y(r.target.value)}),o.jsx(se,{type:"text",placeholder:"To",value:f?parseInt(f).toLocaleString():"",onChange:r=>l(r.target.value)})]})]}),o.jsx(ne,{type:"submit",children:"Search"}),o.jsx(ie,{onClick:S,type:"button",children:"Reset"})]})}const de=t.button`
   border: none;
   outline: none;
   background: none;

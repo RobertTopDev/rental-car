@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+import { ResetBtn } from "../Filter/Filter.styled";
 import {
   NeedHelpFormWrapper,
   NeedHelpInput,
@@ -8,12 +10,45 @@ import {
 } from "./NeedHelpForm.styled";
 
 // eslint-disable-next-line react/prop-types
-function NeedHelpForm({ handleNeedHelpCloseModal }) {
+function NeedHelpForm({ handleNeedHelpCloseModal, setNeedHelp }) {
   const handleNeedHelp = (e) => {
     e.preventDefault();
 
-    console.log(e.target.email);
+    const data = {
+      email: e.target.email.value,
+      message: e.target.comment.value,
+    };
+
+    if (data.email.length === 0 || data.message.length === 0) {
+      toast.warning("Please fill in all required fields.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      toast.success(
+        "Thank you for reaching out! Your message has been received, and we will review it soon. We appreciate your request for help.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+        }
+      );
+    }
+
+    setNeedHelp((prevState) => !prevState);
   };
+
   return (
     <>
       <NeedHelpCloseModal onClick={handleNeedHelpCloseModal} />
