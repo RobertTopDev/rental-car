@@ -1,4 +1,4 @@
-import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z as O,A as z,C as R,H as G,n as K,D as Q}from"./index-5Z8bNcPP.js";import{v as P,C as T}from"./v4-C2SBEUU8.js";const X=e=>e.cars.cars.items,Z=e=>e.cars.filter,_=t.div`
+import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as G,y as P,z as L,A as O,C as z,D as T,H as K,n as Q,F as X}from"./index-CAGjrYee.js";import{v as I,C as R}from"./v4-KNvhz6Ze.js";const Z=e=>e.cars.cars.items,_=e=>e.cars.filter,ee=t.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -9,7 +9,7 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
   @media (min-width: 1440px) {
     padding: 9.6rem 12.8rem;
   }
-`,ee=t.ul`
+`,oe=t.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,13 +36,13 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
     row-gap: 5rem;
     column-gap: 2.4rem;
   }
-`,oe=t.li`
+`,re=t.li`
   font-family: ${d};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.mainTextColor};
-`,re=["Buick","Volvo","Honda","Toyota","Ford","Jeep","HUMMER","Subaru","Mitsubishi","Tesla","Nissan","Lincoln","GMC","Hyundai","MINI","Bentley","Mercedes-Benz","Aston Martin","Pontiac","Lamborghini","Audi","BMW","Chevrolet","Chrysler","Kia","Land Rover","Porsche","Lexus","Jaguar"],te=t.form`
+`,te=["Buick","Volvo","Honda","Toyota","Ford","Jeep","HUMMER","Subaru","Mitsubishi","Tesla","Nissan","Lincoln","GMC","Hyundai","MINI","Bentley","Mercedes-Benz","Aston Martin","Pontiac","Lamborghini","Audi","BMW","Chevrolet","Chrysler","Kia","Land Rover","Porsche","Lexus","Jaguar"],ne=t.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
@@ -58,13 +58,13 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
     align-items: end;
     gap: 1.8rem;
   }
-`,F=t.div`
+`,B=t.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 
   position: relative;
-`,ne=t.button`
+`,ie=t.button`
   background: none;
   border: none;
   outline: none;
@@ -86,7 +86,7 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
   @media (min-width: 840px) {
     padding: 1.4rem 4.4rem;
   }
-`,ie=t.button`
+`,ae=t.button`
   background: none;
   border: none;
   outline: none;
@@ -206,10 +206,10 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
   font-size: 14px;
   line-height: 1.28571;
   color: ${e=>e.theme.colors.mainTextColorLowOp};
-`,ae=t.div`
+`,se=t.div`
   display: flex;
   max-width: 32rem;
-`,se=t.input`
+`,le=t.input`
   border: none;
   outline: none;
   background: none;
@@ -247,7 +247,7 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
   @media (min-width: 1440px) {
     width: 16rem;
   }
-`,le=t.input`
+`,ce=t.input`
   border: none;
   outline: none;
   background: none;
@@ -325,7 +325,7 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
   @media (min-width: 1440px) {
     right: 1.2rem;
   }
-`;function ce({handlePage:e,setDisplayedCars:h,setFilteredSearch:p}){const[w,g]=a.useState(""),[u,C]=a.useState(""),[x,y]=a.useState(""),[f,l]=a.useState(""),[b,k]=a.useState(!1),[v,j]=a.useState(!1),i=U(),$=()=>{const r=[];for(let c=10;c<=250;c+=10)r.push(o.jsxs(D,{onClick:()=>s(c),children:[c," $"]},P()));return r},n=r=>{g(r),k(!1)},s=r=>{C(r),j(!1)},m=async()=>{g(""),C(""),y(""),l("");const r=await i(I());h(r.payload),i(L("")),i(O("")),i(z({min:"",max:""})),p(!1)},S=()=>{m(),e()};async function B(r){if(r.preventDefault(),w.length===0&&!u&&x.length===0&&f.length===0){q.warning("Please choose a brand, price, or mileage range to refine your search.",{position:"top-right",autoClose:3e3,hideProgressBar:!1,closeOnClick:!0,pauseOnHover:!1,draggable:!1,progress:void 0,theme:"light"});return}const c={brand:w,price:u||"250",mileage:{from:x||"0",to:f||"15000"}},V=await i(I());h(V.payload),p(!0),i(L(c.brand)),i(O(c.price)),i(z({min:c.mileage.from,max:c.mileage.to})),e()}return o.jsxs(te,{onSubmit:B,children:[o.jsxs(F,{children:[o.jsx(M,{htmlFor:"carBrand",children:"Car brand:"}),o.jsxs(H,{onClick:()=>k(!b),children:[w||"Enter the text",b?o.jsx(E,{}):o.jsx(W,{})]}),b&&o.jsx(A,{children:re.map(r=>o.jsx(D,{onClick:()=>n(r),children:r},r))})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"price",children:"Price / 1 hour"}),o.jsxs(H,{onClick:()=>j(!v),children:[u||"To $",v?o.jsx(E,{}):o.jsx(W,{})]}),v&&o.jsx(A,{children:$()})]}),o.jsxs(F,{children:[o.jsx(M,{htmlFor:"mileage",children:"Car mileage / km"}),o.jsxs(ae,{children:[o.jsx(le,{type:"text",placeholder:"From",value:x?parseInt(x).toLocaleString():"",onChange:r=>y(r.target.value)}),o.jsx(se,{type:"text",placeholder:"To",value:f?parseInt(f).toLocaleString():"",onChange:r=>l(r.target.value)})]})]}),o.jsx(ne,{type:"submit",children:"Search"}),o.jsx(ie,{onClick:S,type:"button",children:"Reset"})]})}const de=t.button`
+`;function de({handlePage:e,setDisplayedCars:h,setFilteredSearch:p}){const[w,g]=a.useState(""),[u,C]=a.useState(""),[x,y]=a.useState(""),[f,l]=a.useState(""),[b,k]=a.useState(!1),[j,v]=a.useState(!1),i=U(),$=()=>{const r=[];for(let c=10;c<=250;c+=10)r.push(o.jsxs(D,{onClick:()=>s(c),children:[c," $"]},I()));return r},n=r=>{g(r),k(!1)},s=r=>{C(r),v(!1)},m=async()=>{g(""),C(""),y(""),l("");const r=await i(P());h(r.payload),i(L("")),i(O("")),i(z({min:"",max:""})),p(!1)},S=()=>{m(),e()};async function F(r){if(r.preventDefault(),w.length===0&&!u&&x.length===0&&f.length===0){q.warning("Please choose a brand, price, or mileage range to refine your search.",G);return}const c={brand:w,price:u||"250",mileage:{from:x||"0",to:f||"15000"}},V=await i(P());h(V.payload),p(!0),i(L(c.brand)),i(O(c.price)),i(z({min:c.mileage.from,max:c.mileage.to})),e()}return o.jsxs(ne,{onSubmit:F,children:[o.jsxs(B,{children:[o.jsx(M,{htmlFor:"carBrand",children:"Car brand:"}),o.jsxs(H,{onClick:()=>k(!b),children:[w||"Enter the text",b?o.jsx(E,{}):o.jsx(W,{})]}),b&&o.jsx(A,{children:te.map(r=>o.jsx(D,{onClick:()=>n(r),children:r},r))})]}),o.jsxs(B,{children:[o.jsx(M,{htmlFor:"price",children:"Price / 1 hour"}),o.jsxs(H,{onClick:()=>v(!j),children:[u||"To $",j?o.jsx(E,{}):o.jsx(W,{})]}),j&&o.jsx(A,{children:$()})]}),o.jsxs(B,{children:[o.jsx(M,{htmlFor:"mileage",children:"Car mileage / km"}),o.jsxs(se,{children:[o.jsx(ce,{type:"text",placeholder:"From",value:x?parseInt(x).toLocaleString():"",onChange:r=>y(r.target.value)}),o.jsx(le,{type:"text",placeholder:"To",value:f?parseInt(f).toLocaleString():"",onChange:r=>l(r.target.value)})]})]}),o.jsx(ie,{type:"submit",children:"Search"}),o.jsx(ae,{onClick:S,type:"button",children:"Reset"})]})}const me=t.button`
   border: none;
   outline: none;
   background: none;
@@ -345,4 +345,4 @@ import{b as t,p as d,o as J,q as Y,r as a,t as U,j as o,v as q,x as I,y as L,z a
     cursor: pointer;
     background-color: ${e=>e.theme.colors.accentColorHover};
   }
-`;function N({onLoadMoreClick:e}){return o.jsx(de,{onClick:e,children:"Load More"})}function pe(){const e=U(),h=R(X),[p,w]=a.useState(!1),[g,u]=a.useState(1),[C,x]=a.useState(!0),[y,f]=a.useState([]),l=R(Z);function b(){u(s=>s+1)}function k(){u(1)}const i=Math.ceil(52/12);a.useEffect(()=>{async function s(){try{x(g<i),await e(Q(g)).unwrap()}catch(m){console.log(m.message)}}s()},[e,g,i]);function $(){return y.filter(m=>{const S=!l.brand||m.make===l.brand,B=parseInt(m.rentalPrice.replace("$",""))<=l.price,r=!l.mileageRange||m.mileage>=l.mileageRange.min&&m.mileage<=l.mileageRange.max;return S&&B&&r})}const n=$();return o.jsxs(o.Fragment,{children:[o.jsx(G,{children:o.jsxs(K,{children:[o.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),o.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."}),o.jsx("meta",{name:"keywords",content:"car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),o.jsxs(_,{children:[o.jsx(ce,{handlePage:k,setDisplayedCars:f,setFilteredSearch:w}),o.jsx(ee,{children:n&&(n==null?void 0:n.length)===0&&p?o.jsx(oe,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(s=>o.jsx(T,{items:s},P())):h==null?void 0:h.map(s=>o.jsx(T,{items:s},P()))}),p&&n.length>12&&o.jsx(N,{onLoadMoreClick:b}),!p&&C&&o.jsx(N,{onLoadMoreClick:b})]})]})}export{pe as default};
+`;function N({onLoadMoreClick:e}){return o.jsx(me,{onClick:e,children:"Load More"})}function ge(){const e=U(),h=T(Z),[p,w]=a.useState(!1),[g,u]=a.useState(1),[C,x]=a.useState(!0),[y,f]=a.useState([]),l=T(_);function b(){u(s=>s+1)}function k(){u(1)}const i=Math.ceil(52/12);a.useEffect(()=>{async function s(){try{x(g<i),await e(X(g)).unwrap()}catch(m){console.log(m.message)}}s()},[e,g,i]);function $(){return y.filter(m=>{const S=!l.brand||m.make===l.brand,F=parseInt(m.rentalPrice.replace("$",""))<=l.price,r=!l.mileageRange||m.mileage>=l.mileageRange.min&&m.mileage<=l.mileageRange.max;return S&&F&&r})}const n=$();return o.jsxs(o.Fragment,{children:[o.jsx(K,{children:o.jsxs(Q,{children:[o.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),o.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."}),o.jsx("meta",{name:"keywords",content:"car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),o.jsxs(ee,{children:[o.jsx(de,{handlePage:k,setDisplayedCars:f,setFilteredSearch:w}),o.jsx(oe,{children:n&&(n==null?void 0:n.length)===0&&p?o.jsx(re,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(s=>o.jsx(R,{items:s},I())):h==null?void 0:h.map(s=>o.jsx(R,{items:s},I()))}),p&&n.length>12&&o.jsx(N,{onLoadMoreClick:b}),!p&&C&&o.jsx(N,{onLoadMoreClick:b})]})]})}export{ge as default};
