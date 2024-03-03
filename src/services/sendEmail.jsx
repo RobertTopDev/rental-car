@@ -14,7 +14,9 @@ const nodemailerConfig = {
 const transport = nodemailer.createTransport(nodemailerConfig);
 
 const sendEmail = (data) => {
+  console.log(data);
   const email = { ...data, from: EMAIL_FROM };
+  console.log(email);
   return transport.sendMail(email);
 };
 

@@ -10,6 +10,7 @@ import {
   NeedHelpTitle,
   NeedHelpCloseModal,
 } from "./NeedHelpForm.styled";
+import { sendEmail } from "../../services/sendEmail";
 
 // eslint-disable-next-line react/prop-types
 function NeedHelpForm({ handleNeedHelpCloseModal, setNeedHelp }) {
@@ -26,6 +27,7 @@ function NeedHelpForm({ handleNeedHelpCloseModal, setNeedHelp }) {
 
     if (validEmail && validMessage) {
       try {
+        sendEmail(data);
         await fetchEmailDB(data);
         toast.success(
           "Thank you for reaching out! Your message has been received.",
