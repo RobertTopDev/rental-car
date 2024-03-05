@@ -37,6 +37,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.1",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.10",
@@ -46,7 +47,6 @@
     "formik": "^2.4.5",
     "gh-pages": "^6.1.1",
     "modern-normalize": "^2.0.0",
-    "nodemailer": "^6.9.11",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.8",
     "react-dom": "^18.2.0",
