@@ -111,7 +111,7 @@ function Terms({ scrollToTop }) {
                 If you have any questions or concerns about these Terms of
                 Service, please contact us at{" "}
                 <PrivacyText style={{ display: "inline-block" }}>
-                  alexsmagin1@gmail.com
+                  roberttanelriegler@gmail.com
                 </PrivacyText>
               </PrivacySubText>
             </PrivacyRulesWrapper>
