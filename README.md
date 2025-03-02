@@ -28,9 +28,6 @@ Welcome to Cruise Wheels, a React Redux project built on Vite that allows you to
 ![Cruise Wheels](/public/images/screenshots/cruise1.jpg) _Screenshot 1
 (Home Page Dark Theme)_
 
-![Cruise Wheels](/public/images/screenshots/cruise2.jpg) _Screenshot 2
-(Home Page Light Theme)_
-
 ![Cruise Wheels](/public/images/screenshots/cruise3.jpg) _Screenshot 3
 (Catalog Page Dark Theme)_
 
