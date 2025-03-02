@@ -44,7 +44,7 @@ function Footer() {
         <FooterContactAddressContainer>
           <Tooltip title="Call Me" arrow placement="right">
             <FooterContactIconLink
-              href="tel:+17734141884"
+              href="tel:+3727120593"
               aria-label="Call +372 712 0593"
               rel="noopener noreferrer"
             >
@@ -83,7 +83,7 @@ function Footer() {
         </FooterContactAddressContainer>
         <FooterContactBtnWrapper>
           <FooterCallBtn
-            href="tel:+17734141884"
+            href="tel:+3727120593"
             aria-label="Call our customer support"
             title="Call our customer support"
           >
@@ -104,7 +104,7 @@ function Footer() {
       </FooterContactBtnsWrapper>
       <FooterInfoWrapper>
         <FooterInfoText>
-          Alex Smagin &copy;Rental Car <span>{new Date().getFullYear()}</span>.
+          Robert T Riegler &copy;Rental Car <span>{new Date().getFullYear()}</span>.
           All rights reserved.
         </FooterInfoText>
         <FooterLinkWrapper>

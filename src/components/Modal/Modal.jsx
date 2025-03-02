@@ -152,7 +152,7 @@ function ModalPopUp({ items }) {
             </div>
             <div>
               <ModalBtn
-                href="tel:+17734141884"
+                href="tel:+3727120593"
                 aria-label="Call us to rent a car"
                 title="Call us to rent a car"
               >
